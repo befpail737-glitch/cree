@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 50">
+  <!-- Background -->
+  <rect width="200" height="50" fill="white"/>
+  
+  <!-- LiTong Text -->
+  <text x="25" y="32" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1E40AF">
+    LiTong
+  </text>
+  
+  <!-- Abstract representation of light/electric signals -->
+  <g stroke="#F97316" stroke-width="2" fill="none">
+    <!-- Wavy line representing light/electricity -->
+    <path d="M60 25 Q70 15, 80 25 T100 25 T120 25 T140 25" />
+    
+    <!-- Light rays -->
+    <line x1="160" y1="15" x2="170" y2="10" />
+    <line x1="160" y1="15" x2="170" y2="20" />
+    <line x1="160" y1="35" x2="170" y2="30" />
+    <line x1="160" y1="35" x2="170" y2="40" />
+  </g>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f0f0f0"/>
+  
+  <!-- LED representation -->
+  <rect x="75" y="75" width="150" height="150" rx="10" ry="10" fill="#d0d0d0" stroke="#a0a0a0" stroke-width="2"/>
+  
+  <!-- Chip representation -->
+  <rect x="110" y="110" width="80" height="80" fill="#ffcc00" stroke="#ff9900" stroke-width="1"/>
+  
+  <!-- Electrodes -->
+  <rect x="95" y="140" width="20" height="20" fill="#c0c0c0"/>
+  <rect x="185" y="140" width="20" height="20" fill="#c0c0c0"/>
+  
+  <!-- Light rays -->
+  <circle cx="150" cy="150" r="60" fill="none" stroke="#ffcc00" stroke-width="1" stroke-dasharray="5,5"/>
+  <circle cx="150" cy="150" r="80" fill="none" stroke="#ffcc00" stroke-width="1" stroke-dasharray="5,5"/>
+  
+  <!-- Text label -->
+  <text x="150" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">
+    Cree XLamp XP-E2 LED
+  </text>
+  
+  <!-- Cree logo area -->
+  <rect x="100" y="85" width="100" height="20" fill="#1e40af" stroke="#1d3557" stroke-width="1"/>
+  <text x="150" y="100" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Cree XLamp
+  </text>
+</svg>

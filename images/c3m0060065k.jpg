@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f0f0f0"/>
+  
+  <!-- MOSFET package representation -->
+  <rect x="75" y="75" width="150" height="150" rx="15" ry="15" fill="#2c3e50" stroke="#1a252f" stroke-width="3"/>
+  
+  <!-- Package leads -->
+  <rect x="60" y="135" width="15" height="30" fill="#7f8c8d"/>
+  <rect x="225" y="135" width="15" height="30" fill="#7f8c8d"/>
+  <rect x="135" y="60" width="30" height="15" fill="#7f8c8d"/>
+  
+  <!-- Internal chip -->
+  <rect x="110" y="110" width="80" height="80" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
+  
+  <!-- Gate, Drain, Source labels -->
+  <text x="50" y="150" font-family="Arial, sans-serif" font-size="10" fill="#ecf0f1">G</text>
+  <text x="240" y="150" font-family="Arial, sans-serif" font-size="10" fill="#ecf0f1">D</text>
+  <text x="150" y="50" font-family="Arial, sans-serif" font-size="10" fill="#ecf0f1">S</text>
+  
+  <!-- SiC marking -->
+  <text x="150" y="170" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
+    SiC MOSFET
+  </text>
+  <text x="150" y="190" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
+    650V, 60mΩ
+  </text>
+  
+  <!-- Logo area -->
+  <rect x="100" y="80" width="100" height="20" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
+  <text x="150" y="95" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">
+    Wolfspeed
+  </text>
+  
+  <!-- Text label -->
+  <text x="150" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">
+    Wolfspeed C3M0060065K
+  </text>
+</svg>

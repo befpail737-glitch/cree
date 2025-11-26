@@ -1,0 +1,31 @@
+# All markdown files (user requirement - exclude ALL .md files)
+*.md
+
+# Development documentation text files
+contact.txt
+cree.txt
+
+# Exception: Keep robots.txt for SEO
+!robots.txt
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# OS-specific
+.Spotlight-V100
+.Trashes
+ehthumbs.db

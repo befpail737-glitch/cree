@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <rect width="300" height="300" fill="#f0f0f0"/>
+  
+  <!-- Generic LED representation -->
+  <rect x="75" y="75" width="150" height="150" rx="10" ry="10" fill="#d0d0d0" stroke="#a0a0a0" stroke-width="2"/>
+  
+  <!-- Chip representation -->
+  <rect x="120" y="120" width="60" height="60" fill="#ffcc00" stroke="#ff9900" stroke-width="1"/>
+  
+  <!-- Electrodes -->
+  <rect x="100" y="145" width="20" height="10" fill="#c0c0c0"/>
+  <rect x="180" y="145" width="20" height="10" fill="#c0c0c0"/>
+  
+  <!-- Light rays -->
+  <line x1="150" y1="60" x2="150" y2="40" stroke="#ffcc00" stroke-width="2"/>
+  <line x1="170" y1="65" x2="185" y2="50" stroke="#ffcc00" stroke-width="2"/>
+  <line x1="130" y1="65" x2="115" y2="50" stroke="#ffcc00" stroke-width="2"/>
+  <line x1="190" y1="85" x2="210" y2="70" stroke="#ffcc00" stroke-width="2"/>
+  <line x1="110" y1="85" x2="90" y2="70" stroke="#ffcc00" stroke-width="2"/>
+  
+  <!-- Text label -->
+  <text x="150" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">
+    Cree LED Product
+  </text>
+</svg>
