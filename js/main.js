@@ -235,49 +235,80 @@ function initSmoothScrolling() {
 
 // Track scroll position for header effects
 function initScrollEffects() {
-    let lastScrollTop = 0;
     const header = document.querySelector('.header');
-    
+
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down - hide header
-            header.style.transform = 'translateY(-100%)';
+
+        if (scrollTop > 10) {
+            header.classList.add('scrolled');
         } else {
-            // Scrolling up - show header
-            header.style.transform = 'translateY(0)';
+            header.classList.remove('scrolled');
         }
-        
-        lastScrollTop = scrollTop;
     });
 }
 
 // Initialize lazy loading for images
 function initLazyLoading() {
-    const images = document.querySelectorAll('img[data-src]');
-    
+    const images = document.querySelectorAll('img[data-src], picture source[data-srcset]');
+
     if ('IntersectionObserver' in window) {
+        const config = {
+            rootMargin: '50px 0px', // Start loading 50px before entering viewport
+            threshold: 0.01
+        };
+
         const imageObserver = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.src = img.dataset.src;
-                    img.removeAttribute('data-src');
-                    imageObserver.unobserve(img);
+                    const element = entry.target;
+
+                    // Handle picture element source tags
+                    if (element.tagName === 'SOURCE' && element.dataset.srcset) {
+                        element.srcset = element.dataset.srcset;
+                        delete element.dataset.srcset;
+                    }
+
+                    // Handle img elements
+                    if (element.tagName === 'IMG' && element.dataset.src) {
+                        // Add loading state
+                        element.classList.add('lazy-loading');
+
+                        // Preload the image
+                        const img = new Image();
+                        img.onload = () => {
+                            element.src = element.dataset.src;
+                            element.classList.remove('lazy-loading');
+                            element.classList.add('lazy-loaded');
+                            delete element.dataset.src;
+                        };
+                        img.onerror = () => {
+                            element.classList.remove('lazy-loading');
+                            element.classList.add('lazy-error');
+                            console.error('Failed to load image:', element.dataset.src);
+                        };
+                        img.src = element.dataset.src;
+                    }
+
+                    imageObserver.unobserve(element);
                 }
             });
-        });
-        
+        }, config);
+
         images.forEach(img => {
             imageObserver.observe(img);
         });
     } else {
         // Fallback for browsers that don't support IntersectionObserver
-        const imagesArray = Array.from(images);
-        imagesArray.forEach(img => {
-            img.src = img.dataset.src;
-            img.removeAttribute('data-src');
+        images.forEach(element => {
+            if (element.dataset.src) {
+                element.src = element.dataset.src;
+                delete element.dataset.src;
+            }
+            if (element.dataset.srcset) {
+                element.srcset = element.dataset.srcset;
+                delete element.dataset.srcset;
+            }
         });
     }
 }
