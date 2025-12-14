@@ -7,19 +7,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Set current year in footer
     setCurrentYear();
-    
+
     // Initialize mobile menu toggle
     initMobileMenu();
-    
+
+    // Initialize mobile dropdown menus
+    initMobileDropdowns();
+
     // Initialize accordion/FAQ functionality
     initAccordions();
-    
+
     // Initialize product filtering if on product pages
     initProductFilters();
-    
+
     // Initialize any form functionality
     initForms();
-    
+
     // Initialize search functionality if search exists
     initSearch();
 });
@@ -36,29 +39,60 @@ function setCurrentYear() {
 function initMobileMenu() {
     const mobileToggle = document.querySelector('.mobile-menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
-    
-    if (mobileToggle && navMenu) {
+    const mainNav = document.querySelector('.main-nav');
+
+    if (mobileToggle && navMenu && mainNav) {
         mobileToggle.addEventListener('click', function() {
-            // Toggle active class on hamburger icon
-            this.classList.toggle('active');
-            
-            // Show/hide the navigation menu
-            if (navMenu.style.display === 'flex') {
-                navMenu.style.display = 'none';
+            // 切换活跃状态（使用 CSS 类，而非 inline styles）
+            const isActive = navMenu.classList.contains('mobile-active');
+
+            if (isActive) {
+                navMenu.classList.remove('mobile-active');
+                mainNav.classList.remove('mobile-active');
+                this.classList.remove('active');
+                this.setAttribute('aria-expanded', 'false');
             } else {
-                navMenu.style.display = 'flex';
-                navMenu.style.flexDirection = 'column';
-                navMenu.style.position = 'absolute';
-                navMenu.style.top = '100%';
-                navMenu.style.left = '0';
-                navMenu.style.backgroundColor = 'white';
-                navMenu.style.boxShadow = '0 10px 15px rgba(0, 0, 0, 0.1)';
-                navMenu.style.padding = 'var(--space-md)';
-                navMenu.style.width = '100vw';
-                navMenu.style.zIndex = 'var(--z-dropdown)';
+                navMenu.classList.add('mobile-active');
+                mainNav.classList.add('mobile-active');
+                this.classList.add('active');
+                this.setAttribute('aria-expanded', 'true');
             }
         });
     }
+}
+
+// 移动端下拉菜单点击切换
+function initMobileDropdowns() {
+    const dropdownToggles = document.querySelectorAll('.dropdown > a');
+
+    dropdownToggles.forEach(toggle => {
+        toggle.addEventListener('click', function(e) {
+            // 在移动设备上阻止默认链接行为
+            if (window.innerWidth < 768) {
+                e.preventDefault();
+
+                const dropdown = this.parentElement;
+                const isOpen = dropdown.classList.contains('open');
+
+                // 关闭所有其他下拉菜单
+                document.querySelectorAll('.dropdown.open').forEach(item => {
+                    if (item !== dropdown) {
+                        item.classList.remove('open');
+                        item.querySelector('a').setAttribute('aria-expanded', 'false');
+                    }
+                });
+
+                // 切换当前下拉菜单
+                if (isOpen) {
+                    dropdown.classList.remove('open');
+                    this.setAttribute('aria-expanded', 'false');
+                } else {
+                    dropdown.classList.add('open');
+                    this.setAttribute('aria-expanded', 'true');
+                }
+            }
+        });
+    });
 }
 
 // Accordion/FAQ functionality
@@ -364,4 +398,9 @@ window.addEventListener('load', function() {
     initScrollEffects();
     initLazyLoading();
     updateComparisonUI();
+});
+
+// Re-initialize mobile dropdowns on window resize
+window.addEventListener('resize', function() {
+    initMobileDropdowns();
 });

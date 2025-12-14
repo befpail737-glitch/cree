@@ -331,12 +331,30 @@ button:focus:not(:focus-visible) {
 }
 
 .main-nav {
-  display: none;
+  display: none;  /* 移动端默认隐藏 */
+}
+
+/* 移动端菜单展开时的样式 */
+.main-nav.mobile-active {
+  display: block;
 }
 
 .nav-menu {
   display: flex;
+  flex-direction: column;  /* 移动端垂直布局 */
   list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .main-nav {
+    display: block;  /* 桌面端始终显示 */
+  }
+
+  .nav-menu {
+    flex-direction: row;  /* 桌面端水平布局 */
+  }
 }
 
 .nav-item {
@@ -380,6 +398,52 @@ button:focus:not(:focus-visible) {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+}
+
+/* 移动端下拉菜单打开状态 */
+@media (max-width: 767px) {
+  .dropdown.open .dropdown-menu {
+    position: static;      /* 取消绝对定位，在文档流中显示 */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    display: block;        /* 确保可见 */
+    box-shadow: none;      /* 移动端不需要阴影 */
+    background-color: var(--bg-white);
+    padding-left: var(--space-md);  /* 缩进显示层级 */
+    border: none;
+    border-radius: 0;
+  }
+
+  .dropdown-menu {
+    position: static;      /* 移动端默认静态定位 */
+    box-shadow: none;
+    border: none;
+  }
+
+  /* 确保移动菜单在展开时可见 */
+  .nav-menu.mobile-active {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-white);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    padding: var(--space-md);
+    z-index: 1000;         /* 使用具体值替代 CSS 变量 */
+  }
+}
+
+/* 桌面端保持 hover 交互，同时支持 .open 类 */
+@media (min-width: 768px) {
+  .dropdown:hover .dropdown-menu,
+  .dropdown.open .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
 .dropdown-link {
