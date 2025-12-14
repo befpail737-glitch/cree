@@ -834,16 +834,35 @@ button:focus:not(:focus-visible) {
   color: var(--primary-blue);
 }
 
+.product-icon svg {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin: 0 auto;
+  stroke: currentColor;
+}
+
 .product-card h3 {
   margin-bottom: var(--space-sm);
   font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--dark-gray);
+  line-height: 1.4;
+}
+
+.product-card p {
+  font-size: 0.938rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+  flex: 1;
 }
 
 .product-link {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-top: var(--space-md);
+  margin-top: auto;
   color: var(--primary-blue);
   font-weight: 500;
   text-decoration: none;
