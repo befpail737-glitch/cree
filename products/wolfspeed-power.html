@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -65,6 +65,8 @@
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <!-- Header Section -->
     <header class="header">
         <div class="container">
@@ -73,59 +75,63 @@
                     <img src="images/logo.svg" alt="LiTong Group Logo" class="logo-img">
                 </a>
                 
-                <nav class="main-nav">
-                    <ul class="nav-menu">
-                        <li class="nav-item">
-                            <a href="/" class="nav-link">Home</a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="/" class="nav-link" role="menuitem">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link active">Products <span class="dropdown-arrow">▼</span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">
-                                    <a href="/products/cree-led" class="dropdown-link">Cree LED</a>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="#" class="nav-link active" role="menuitem" aria-haspopup="true" aria-expanded="false">Products <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item" role="none">
+                                    <a href="/products/cree-led" class="dropdown-link" role="menuitem">Cree LED</a>
                                 </li>
-                                <li class="dropdown-item">
-                                    <a href="/products/wolfspeed-power" class="dropdown-link">Wolfspeed Power</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a href="#" class="nav-link">Solutions <span class="dropdown-arrow">▼</span></a>
-                            <ul class="dropdown-menu">
-                                <li class="dropdown-item">
-                                    <a href="/solutions/outdoor-lighting" class="dropdown-link">Outdoor Lighting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="/solutions/horticultural-lighting" class="dropdown-link">Horticultural Lighting</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="/solutions/ev-chargers" class="dropdown-link">EV Chargers</a>
-                                </li>
-                                <li class="dropdown-item">
-                                    <a href="/solutions/solar-inverters" class="dropdown-link">Solar Inverters</a>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/products/wolfspeed-power" class="dropdown-link" role="menuitem">Wolfspeed Power</a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="/support" class="nav-link">Support</a>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Solutions <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/outdoor-lighting" class="dropdown-link" role="menuitem">Outdoor Lighting</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/horticultural-lighting" class="dropdown-link" role="menuitem">Horticultural Lighting</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/ev-chargers" class="dropdown-link" role="menuitem">EV Chargers</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/solar-inverters" class="dropdown-link" role="menuitem">Solar Inverters</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a href="/news" class="nav-link">News</a>
+                        <li class="nav-item" role="none">
+                            <a href="/support" class="nav-link" role="menuitem">Support</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/about" class="nav-link">About</a>
+                        <li class="nav-item" role="none">
+                            <a href="/news" class="nav-link" role="menuitem">News</a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/contact" class="nav-link cta-button">Contact</a>
+                        <li class="nav-item" role="none">
+                            <a href="/about" class="nav-link" role="menuitem">About</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="/contact" class="nav-link cta-button" role="menuitem">Contact</a>
                         </li>
                     </ul>
                 </nav>
                 
-                <div class="mobile-menu-toggle">
+                <button
+                  class="mobile-menu-toggle"
+                  aria-label="Toggle navigation menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
@@ -140,7 +146,7 @@
     </div>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container" id="main-content">
         <section class="page-header">
             <h1>Wolfspeed SiC Power Components</h1>
             <p class="page-subtitle">As an authorized distributor, we offer the complete range of Wolfspeed Silicon Carbide (SiC) power components including MOSFETs, diodes, and power modules. Our technical expertise ensures you get the right SiC solution for your high-efficiency power conversion applications.</p>
