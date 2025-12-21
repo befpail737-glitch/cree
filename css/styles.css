@@ -2270,16 +2270,12 @@ small,
   .modular-grid--3col-md {
     grid-template-columns: repeat(3, 1fr);
   }
+}
 
+@media (min-width: 768px) {
   /* 为基础网格类添加最小屏幕断点 */
-  .modular-grid--2col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .modular-grid--3col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+  .modular-grid--2col,
+  .modular-grid--3col,
   .modular-grid--4col {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2306,14 +2302,6 @@ small,
 
 @media (min-width: 1200px) {
   /* 大屏幕显示更多列 */
-  .modular-grid--2col {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .modular-grid--3col {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   .modular-grid--4col {
     grid-template-columns: repeat(4, 1fr);
   }
