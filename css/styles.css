@@ -2242,23 +2242,30 @@ small,
  * 统一模块化网格系统
  */
 
-/* 通用网格容器 */
-.modular-grid {
+/* 通用网格容器 - 使用最高优先级 */
+.container .modular-grid {
   display: grid !important;
   gap: var(--space-lg) !important;
   margin: var(--space-lg) 0 !important;
 }
 
 .modular-grid--2col {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  grid-template-columns: repeat(1, 1fr) !important; /* 移动端默认单列 */
 }
 
 .modular-grid--3col {
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)) !important;
+  grid-template-columns: repeat(1, 1fr) !important; /* 移动端默认单列 */
 }
 
 .modular-grid--4col {
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important;
+  grid-template-columns: repeat(1, 1fr) !important; /* 移动端默认单列 */
+}
+
+/* 确保新网格类优先级高于旧类 */
+.container .modular-grid--2col,
+.container .modular-grid--3col,
+.container .modular-grid--4col {
+  grid-template-columns: repeat(1, 1fr) !important;
 }
 
 /* 响应式网格断点 */
@@ -2270,12 +2277,16 @@ small,
   .modular-grid--3col-md {
     grid-template-columns: repeat(3, 1fr) !important;
   }
-}
 
-@media (min-width: 768px) {
   /* 为基础网格类添加最小屏幕断点 */
-  .modular-grid--2col,
-  .modular-grid--3col,
+  .modular-grid--2col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .modular-grid--3col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
   .modular-grid--4col {
     grid-template-columns: repeat(2, 1fr) !important;
   }
@@ -2302,6 +2313,14 @@ small,
 
 @media (min-width: 1200px) {
   /* 大屏幕显示更多列 */
+  .modular-grid--2col {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .modular-grid--3col {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+
   .modular-grid--4col {
     grid-template-columns: repeat(4, 1fr) !important;
   }
