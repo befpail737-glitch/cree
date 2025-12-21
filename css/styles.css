@@ -1448,6 +1448,49 @@ img.lazy-error::after {
   margin: 0 auto;
 }
 
+/* Common Card Styles */
+.modular-card {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+}
+
+.modular-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.modular-card-icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+}
+
+.modular-card-title {
+  margin-bottom: var(--space-sm);
+  font-size: 1.25rem;
+  color: var(--dark-gray);
+}
+
+.modular-card-description {
+  color: var(--medium-gray);
+  margin-bottom: var(--space-md);
+  flex: 1;
+}
+
 /* Resource Grid */
 .resource-grid {
   display: grid;
@@ -1481,11 +1524,11 @@ img.lazy-error::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0, 114, 206, 0.1); /* Light blue background */
   border-radius: 50%;
   margin-bottom: var(--space-md);
-  color: var(--primary-blue);
   font-size: 1.5rem;
+  background-color: rgba(0, 114, 206, 0.1); /* Light blue background */
+  color: var(--primary-blue);
 }
 
 .resource-card h3 {
@@ -1541,7 +1584,7 @@ img.lazy-error::after {
 /* Support Options Grid */
 .support-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 统一最小宽度 */
   gap: var(--space-lg);
   margin-bottom: var(--space-xl);
 }
@@ -1557,7 +1600,7 @@ img.lazy-error::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 300px;
+  min-height: 320px;
 }
 
 .support-card:hover {
@@ -1571,11 +1614,11 @@ img.lazy-error::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(249, 115, 22, 0.1); /* Light orange background */
   border-radius: 50%;
   margin-bottom: var(--space-md);
-  color: var(--accent-orange);
   font-size: 1.5rem;
+  background-color: rgba(249, 115, 22, 0.1); /* Light orange background */
+  color: var(--accent-orange);
 }
 
 .support-card h3 {
@@ -1704,6 +1747,7 @@ img.lazy-error::after {
   box-shadow: var(--shadow-md);
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 320px;
 }
 
@@ -1713,8 +1757,8 @@ img.lazy-error::after {
 }
 
 .training-card h3 {
-  font-size: 1.25rem;
   margin-bottom: var(--space-sm);
+  font-size: 1.25rem;
   color: var(--dark-gray);
 }
 
