@@ -2214,3 +2214,170 @@ small,
   color: var(--text-secondary);
   margin-bottom: var(--space-xs);
 }
+
+/*
+ * 统一模块化网格系统
+ */
+
+/* 通用网格容器 */
+.modular-grid {
+  display: grid;
+  gap: var(--space-lg);
+  margin: var(--space-lg) 0;
+}
+
+.modular-grid--2col {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.modular-grid--3col {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+}
+
+.modular-grid--4col {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* 响应式网格断点 */
+@media (min-width: 768px) {
+  .modular-grid--2col-md {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modular-grid--3col-md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .modular-grid--3col-lg {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .modular-grid--4col-lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 通用卡片样式 */
+.modular-card {
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: var(--border-radius);
+  padding: var(--space-lg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 320px;
+}
+
+.modular-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.modular-card__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-bottom: var(--space-md);
+  font-size: 1.5rem;
+}
+
+.modular-card__title {
+  margin: var(--space-sm) 0;
+  font-size: 1.25rem;
+  color: var(--dark-gray);
+  font-weight: 600;
+}
+
+.modular-card__description {
+  color: var(--medium-gray);
+  margin-bottom: var(--space-md);
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.modular-card__action {
+  margin-top: auto;
+  width: 100%;
+}
+
+/* 产品卡片变体 */
+.modular-card--product {
+  text-align: center;
+  align-items: center;
+}
+
+.modular-card--product .modular-card__icon {
+  background-color: rgba(0, 114, 206, 0.1); /* Light blue background */
+  color: var(--primary-blue);
+}
+
+/* 解决方案卡片变体 */
+.modular-card--solution {
+  text-align: center;
+  align-items: center;
+}
+
+.modular-card--solution .modular-card__icon {
+  background-color: rgba(249, 115, 22, 0.1); /* Light orange background */
+  color: var(--accent-orange);
+}
+
+/* 新闻卡片变体 */
+.modular-card--news {
+  text-align: left;
+  align-items: stretch;
+  min-height: auto;
+}
+
+.modular-card--news .modular-card__title {
+  text-align: left;
+}
+
+.modular-card--news .modular-card__description {
+  text-align: left;
+}
+
+/* 特性/价值主张卡片变体 */
+.modular-card--feature {
+  text-align: center;
+  align-items: center;
+}
+
+.modular-card--feature .modular-card__icon {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  background-color: rgba(0, 114, 206, 0.1);
+  color: var(--primary-blue);
+}
+
+/* 联系信息卡片 */
+.modular-card--contact {
+  text-align: left;
+  align-items: stretch;
+  min-height: auto;
+}
+
+.modular-card--contact .modular-card__title {
+  text-align: left;
+  margin-bottom: var(--space-xs);
+}
+
+.modular-card--contact ul {
+  padding-left: var(--space-md);
+  margin: var(--space-sm) 0;
+}
+
+.modular-card--contact li {
+  margin-bottom: var(--space-xs);
+}
