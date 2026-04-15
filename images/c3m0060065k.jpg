@@ -1,38 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
-  <rect width="300" height="300" fill="#f0f0f0"/>
-  
-  <!-- MOSFET package representation -->
-  <rect x="75" y="75" width="150" height="150" rx="15" ry="15" fill="#2c3e50" stroke="#1a252f" stroke-width="3"/>
-  
-  <!-- Package leads -->
-  <rect x="60" y="135" width="15" height="30" fill="#7f8c8d"/>
-  <rect x="225" y="135" width="15" height="30" fill="#7f8c8d"/>
-  <rect x="135" y="60" width="30" height="15" fill="#7f8c8d"/>
-  
-  <!-- Internal chip -->
-  <rect x="110" y="110" width="80" height="80" fill="#34495e" stroke="#2c3e50" stroke-width="1"/>
-  
-  <!-- Gate, Drain, Source labels -->
-  <text x="50" y="150" font-family="Arial, sans-serif" font-size="10" fill="#ecf0f1">G</text>
-  <text x="240" y="150" font-family="Arial, sans-serif" font-size="10" fill="#ecf0f1">D</text>
-  <text x="150" y="50" font-family="Arial, sans-serif" font-size="10" fill="#ecf0f1">S</text>
-  
-  <!-- SiC marking -->
-  <text x="150" y="170" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
-    SiC MOSFET
-  </text>
-  <text x="150" y="190" font-family="Arial, sans-serif" font-size="12" fill="#ecf0f1" text-anchor="middle">
-    650V, 60mΩ
-  </text>
-  
-  <!-- Logo area -->
-  <rect x="100" y="80" width="100" height="20" fill="#3498db" stroke="#2980b9" stroke-width="1"/>
-  <text x="150" y="95" font-family="Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle" font-weight="bold">
-    Wolfspeed
-  </text>
-  
-  <!-- Text label -->
-  <text x="150" y="250" font-family="Arial, sans-serif" font-size="14" fill="#333" text-anchor="middle">
-    Wolfspeed C3M0060065K
-  </text>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="300px" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Wolfspeed SiC MOSFET</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#4CAF50" offset="0%"></stop>
+            <stop stop-color="#81C784" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="url(#linearGradient-1)" x="0" y="0" width="400" height="300"></rect>
+        <g transform="translate(100.000000, 75.000000)">
+            <rect stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF" fill-opacity="0.2" x="2" y="2" width="196" height="146" rx="10"></rect>
+            <g transform="translate(51.000000, 36.000000)">
+                <rect fill="#FFFFFF" x="0" y="0" width="98" height="14" rx="7"></rect>
+                <rect fill="#FFFFFF" x="0" y="29" width="98" height="14" rx="7"></rect>
+                <rect fill="#FFFFFF" x="0" y="58" width="98" height="14" rx="7"></rect>
+                <rect fill="#FFFFFF" x="0" y="87" width="98" height="14" rx="7"></rect>
+            </g>
+        </g>
+        <text x="200" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF">Wolfspeed SiC MOSFET</text>
+        <text x="200" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#FFFFFF">Silicon Carbide Power Device</text>
+    </g>
 </svg>

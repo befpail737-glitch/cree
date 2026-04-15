@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Thermal Design Guide | Cree LED Applications | LiTong Group</title>
+    <meta name="description" content="Complete guide to thermal design for Cree LED applications. Learn how to properly manage heat in LED systems using Cree XLamp and other LED products for optimal performance and longevity.">
+    <meta name="keywords" content="LED thermal design, Cree LED thermal management, XLamp thermal design, LED heat sink design, thermal simulation">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://cree.elec-distributor.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Support",
+          "item": "https://cree.elec-distributor.com/support/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Technical Resources",
+          "item": "https://cree.elec-distributor.com/support/technical-resources/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Thermal Design",
+          "item": "https://cree.elec-distributor.com/support/technical-resources/thermal-design/"
+        }
+      ]
+    }
+    </script>
+
+    <!-- Article Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "LED Thermal Design Guide",
+      "description": "Complete guide to thermal design for Cree LED applications",
+      "author": {
+        "@type": "Organization",
+        "name": "LiTong Group Technical Team"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "LiTong Group",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://cree.elec-distributor.com/images/logo.svg"
+        }
+      },
+      "datePublished": "2024-01-15",
+      "dateModified": "2024-01-15",
+      "image": "https://cree.elec-distributor.com/images/thermal-design.jpg"
+    }
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LiTong Group",
+      "legalName": "LiTong Electronics Distributor Co.",
+      "url": "https://cree.elec-distributor.com",
+      "logo": "https://cree.elec-distributor.com/images/logo.svg",
+      "description": "Authorized distributor of Cree LED and Wolfspeed SiC products",
+      "foundingDate": "2005",
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+86 15013702378",
+          "contactType": "customer service",
+          "areaServed": "Worldwide",
+          "availableLanguage": ["English"]
+        }
+      ]
+    }
+    </script>
+
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/index.html" class="logo">
+                    <img src="../images/logo.svg" alt="LiTong Group Logo" class="logo-img">
+                </a>
+
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none">
+                            <a href="/index.html" class="nav-link" role="menuitem">Home</a>
+                        </li>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Products <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item" role="none">
+                                    <a href="/products/cree-led.html" class="dropdown-link" role="menuitem">Cree LED</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/products/wolfspeed-power.html" class="dropdown-link" role="menuitem">Wolfspeed Power</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Solutions <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/outdoor-lighting.html" class="dropdown-link" role="menuitem">Outdoor Lighting</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/horticultural-lighting.html" class="dropdown-link" role="menuitem">Horticultural Lighting</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/ev-chargers.html" class="dropdown-link" role="menuitem">EV Chargers</a>
+                                </li>
+                                <li class="dropdown-item" role="none">
+                                    <a href="/solutions/solar-inverters.html" class="dropdown-link" role="menuitem">Solar Inverters</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="/support/index.html" class="nav-link active" role="menuitem">Support</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="/news/index.html" class="nav-link" role="menuitem">News</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="/about/index.html" class="nav-link" role="menuitem">About</a>
+                        </li>
+                        <li class="nav-item" role="none">
+                            <a href="/contact.html" class="nav-link cta-button" role="menuitem">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button
+                  class="mobile-menu-toggle"
+                  aria-label="Toggle navigation menu"
+                  aria-expanded="false"
+                  aria-controls="mobile-nav">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>/</span>
+            <a href="/support/index.html">Support</a> <span>/</span>
+            <a href="/support/technical-resources">Technical Resources</a> <span>/</span>
+            <span>Thermal Design Guide</span>
+        </div>
+    </div>
+
+    <!-- Technical Article Content -->
+    <div class="container">
+        <article class="technical-article">
+            <header class="article-header">
+                <h1>LED Thermal Design Guide: Optimizing Cree LED Performance Through Effective Heat Management</h1>
+                <p class="article-subtitle">A comprehensive guide to thermal management techniques for Cree XLamp and other LED products, covering heat sink design, thermal interface materials, and system-level thermal optimization strategies.</p>
+                <div class="article-meta">
+                    <span class="article-date">January 15, 2024</span>
+                    <span class="article-author">By LiTong Group Technical Team</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>Proper thermal management is critical for achieving optimal performance and longevity from Cree LED products. This guide provides comprehensive information on thermal design principles specifically tailored for Cree XLamp, J Series, and other LED families. Understanding and implementing effective thermal management strategies will ensure your LED systems operate reliably while maintaining lumen output and extending operational life.</p>
+
+                <h2>Understanding LED Thermal Characteristics</h2>
+                <p>LEDs are semiconductor devices that generate light through electroluminescence, but approximately 70-80% of the electrical energy is converted to heat rather than light. This heat must be effectively managed to prevent:</p>
+                <ul>
+                    <li>Reduced light output (lumen depreciation)</li>
+                    <li>Shift in color characteristics (color shift)</li>
+                    <li>Reduced operational lifetime</li>
+                    <li>Potential device failure due to overheating</li>
+                </ul>
+
+                <p>The junction temperature (TJ) of an LED is the most critical parameter affecting its performance. As junction temperature increases, the following effects are observed:</p>
+                <ul>
+                    <li>Decreased luminous flux output</li>
+                    <li>Increased forward voltage drop</li>
+                    <li>Accelerated degradation rate</li>
+                    <li>Altered light spectrum</li>
+                </ul>
+
+                <div class="technical-figure">
+                    <img src="../images/thermal-characteristics.jpg" alt="LED Thermal Characteristics Graph" class="figure-image">
+                    <p class="figure-caption">Figure 1: Relationship between LED junction temperature and performance parameters</p>
+                </div>
+
+                <h2>Thermal Resistance and Heat Flow Path</h2>
+                <p>Thermal management in LED systems is analyzed using thermal resistance concepts, similar to electrical resistance. The total thermal resistance from junction to ambient (RTH,J-A) is the sum of all thermal resistances in the heat flow path:</p>
+                <p>RTH,J-A = RTH,J-C + RTH,C-H + RTH,H-A</p>
+                <p>Where:</p>
+                <ul>
+                    <li>RTH,J-C = Junction-to-case thermal resistance</li>
+                    <li>RTH,C-H = Case-to-heatsink thermal resistance (includes thermal interface material)</li>
+                    <li>RTH,H-A = Heatsink-to-ambient thermal resistance</li>
+                </ul>
+
+                <p>Each of these thermal resistances contributes to the overall thermal performance of the system. Minimizing each resistance is key to achieving optimal thermal management.</p>
+
+                <h3>Case-to-Heatsink Thermal Resistance</h3>
+                <p>The interface between the LED package and the heatsink is critical. This interface typically includes:</p>
+                <ul>
+                    <li>Thermal interface material (TIM)</li>
+                    <li>Mounting hardware (screws, clips)</li>
+                    <li>Surface irregularities between the package and heatsink</li>
+                </ul>
+
+                <p>Using high-quality thermal interface materials with low thermal resistance is essential. Common TIM options include:</p>
+                <div class="modular-grid modular-grid--3col">
+                    <div class="modular-card modular-card--tech">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="8" y1="12" x2="16" y2="12"></line>
+                                <line x1="12" y1="8" x2="12" y2="16"></line>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Thermal Pads</h4>
+                        <p class="modular-card__description">Pre-cut sheets with consistent thickness, easy to apply and remove.</p>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>Typical thermal resistance: 0.1-0.5 °C·cm²/W</li>
+                            <li>Easy application</li>
+                            <li>Reproducible results</li>
+                        </ul>
+                    </div>
+                    <div class="modular-card modular-card--tech">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Thermal Grease</h4>
+                        <p class="modular-card__description">Paste-like compound that fills microscopic gaps between surfaces.</p>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>Typical thermal conductivity: 1-6 W/m·K</li>
+                            <li>Conforms to surface irregularities</li>
+                            <li>Requires careful application</li>
+                        </ul>
+                    </div>
+                    <div class="modular-card modular-card--tech">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Phase Change Materials</h4>
+                        <p class="modular-card__description">Solid at room temperature, melts at operating temperature to conform to surfaces.</p>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>Combines benefits of pads and grease</li>
+                            <li>Optimal surface conformity at operating temperature</li>
+                            <li>Pre-applied options available</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Heatsink Design Considerations</h2>
+                <p>Effective heatsink design is crucial for dissipating heat from Cree LEDs. The primary goal is to maximize surface area for convection while maintaining structural integrity and manufacturability.</p>
+
+                <h3>Natural vs. Forced Convection</h3>
+                <p>Two primary methods of heat removal exist:</p>
+                <ul>
+                    <li><strong>Natural Convection:</strong> Relies on buoyancy-driven air flow. Simpler and more reliable but requires larger heatsinks.</li>
+                    <li><strong>Forced Convection:</strong> Uses fans or blowers to actively move air. Allows for smaller heatsinks but adds complexity and potential failure points.</li>
+                </ul>
+
+                <div class="modular-grid modular-grid--2col">
+                    <div class="modular-card modular-card--comparison">
+                        <h4 class="modular-card__title">Natural Convection Heatsinks</h4>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>Passive cooling with no moving parts</li>
+                            <li>Quiet operation</li>
+                            <li>Lower system complexity</li>
+                            <li>Higher thermal resistance typically</li>
+                            <li>Larger physical size required</li>
+                        </ul>
+                    </div>
+                    <div class="modular-card modular-card--comparison">
+                        <h4 class="modular-card__title">Forced Convection Heatsinks</h4>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>More efficient heat transfer</li>
+                            <li>Smaller physical size possible</li>
+                            <li>Higher performance capability</li>
+                            <li>Additional system complexity</li>
+                            <li>Potential maintenance requirements</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Material Selection</h3>
+                <p>Common heatsink materials and their properties:</p>
+                <table class="technical-table">
+                    <thead>
+                        <tr>
+                            <th>Material</th>
+                            <th>Thermal Conductivity (W/m·K)</th>
+                            <th>Weight (kg/m³)</th>
+                            <th>Relative Cost</th>
+                            <th>Applications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Aluminum (6061)</td>
+                            <td>167</td>
+                            <td>2700</td>
+                            <td>Low</td>
+                            <td>General lighting, most applications</td>
+                        </tr>
+                        <tr>
+                            <td>Copper</td>
+                            <td>401</td>
+                            <td>8960</td>
+                            <td>High</td>
+                            <td>High-performance applications</td>
+                        </tr>
+                        <tr>
+                            <td>Aluminum (1050)</td>
+                            <td>229</td>
+                            <td>2705</td>
+                            <td>Medium</td>
+                            <td>High-performance aluminum applications</td>
+                        </tr>
+                        <tr>
+                            <td>Graphite Composite</td>
+                            <td>400-650</td>
+                            <td>1800-2100</td>
+                            <td>Very High</td>
+                            <td>Aerospace, high-performance applications</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2>Design Process for Cree LED Systems</h2>
+                <p>When designing thermal management for Cree LED systems, follow these steps:</p>
+
+                <h3>Step 1: Determine Power Dissipation</h3>
+                <p>Calculate the heat that needs to be dissipated based on the electrical power input and luminous efficiency:</p>
+                <p>Heat Dissipation = Power Input - Light Output</p>
+                <p>For Cree XLamp LEDs, typically 70-80% of input power becomes heat that must be removed.</p>
+
+                <h3>Step 2: Define Thermal Requirements</h3>
+                <p>Based on the application requirements, define acceptable junction temperatures:</p>
+                <ul>
+                    <li>For maximum life: TJ ≤ 85°C</li>
+                    <li>For standard applications: TJ ≤ 105°C</li>
+                    <li>Maximum allowable: Check specific Cree datasheet</li>
+                </ul>
+
+                <h3>Step 3: Calculate Required Thermal Resistance</h3>
+                <p>Using the formula:</p>
+                <p>RTH,J-A = (TJ,max - TA) / Pdissipated</p>
+                <p>Where TA is the maximum ambient temperature and Pdissipated is the heat to be removed.</p>
+
+                <div class="modular-grid modular-grid--1col">
+                    <div class="modular-card modular-card--process">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Design Calculation Example</h4>
+                        <p class="modular-card__description">For a Cree XLamp XP-E2 running at 350mA (0.35W power input) with 75% of power becoming heat in a 40°C ambient environment with a target TJ of 90°C:</p>
+                        <p class="calculation">Pdissipated = 0.35W × 0.75 = 0.26W</p>
+                        <p class="calculation">RTH,J-A = (90°C - 40°C) / 0.26W = 192.3°C/W</p>
+                        <p class="modular-card__action">This means the total thermal resistance from junction to ambient must be less than 192.3°C/W.</p>
+                    </div>
+                </div>
+
+                <h3>Step 4: Select Components</h3>
+                <p>Based on the calculated thermal requirements, select appropriate:</p>
+                <ul>
+                    <li>Heatsink with appropriate thermal resistance</li>
+                    <li>Thermal interface material</li>
+                    <li>Mounting method</li>
+                </ul>
+
+                <h2>Verification and Testing</h2>
+                <p>After implementing thermal design, verify performance through:</p>
+                <ul>
+                    <li>Thermal simulation (CFD analysis)</li>
+                    <li>Actual temperature measurements</li>
+                    <li>Long-term reliability testing</li>
+                    <li>Performance validation under intended operating conditions</li>
+                </ul>
+
+                <p>Measuring junction temperature can be accomplished using:</p>
+                <ul>
+                    <li>Temperature-sensitive electrical parameters (Vf measurements)</li>
+                    <li>Infrared thermography (for external temperatures)</li>
+                    <li>Embedded temperature sensors (if available)</li>
+                </ul>
+
+                <h2>Best Practices Summary</h2>
+                <div class="modular-grid modular-grid--2col">
+                    <div class="modular-card modular-card--best-practice">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                <path d="M12 8v4"></path>
+                                <path d="M12 16h.01"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Design Best Practices</h4>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>Always verify designs with actual measurements</li>
+                            <li>Consider derating curves from Cree datasheets</li>
+                            <li>Account for aging effects in long-term designs</li>
+                            <li>Include safety margins in calculations</li>
+                            <li>Optimize for the worst-case ambient temperature</li>
+                        </ul>
+                    </div>
+                    <div class="modular-card modular-card--best-practice">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zm8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Installation Best Practices</h4>
+                        <ul style="text-align:left; padding-left:1.5em;">
+                            <li>Apply TIM consistently and without air gaps</li>
+                            <li>Use proper mounting torque for good contact</li>
+                            <li>Ensure heatsink fins are not obstructed</li>
+                            <li>Consider orientation for natural convection</li>
+                            <li>Account for dust accumulation in long-term designs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h2>Resources for Cree LED Thermal Design</h2>
+                <p>For more detailed information on thermal design for specific Cree LED products, consult these resources:</p>
+                <div class="modular-grid modular-grid--3col">
+                    <div class="modular-card">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Cree Thermal Management Design Guide</h4>
+                        <p class="modular-card__description">Comprehensive document covering thermal design principles for Cree LED products.</p>
+                        <div class="modular-card__action">
+                            <a href="#" class="btn btn-secondary">Download Guide</a>
+                        </div>
+                    </div>
+                    <div class="modular-card">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">LED System Design Calculator</h4>
+                        <p class="modular-card__description">Online tool for calculating thermal requirements for Cree LED systems.</p>
+                        <div class="modular-card__action">
+                            <a href="#" class="btn btn-secondary">Access Calculator</a>
+                        </div>
+                    </div>
+                    <div class="modular-card">
+                        <div class="modular-card__icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h4 class="modular-card__title">Application Engineering Support</h4>
+                        <p class="modular-card__description">Contact our FAEs for specific design assistance with Cree LED thermal management.</p>
+                        <div class="modular-card__action">
+                            <a href="/contact.html" class="btn btn-secondary">Contact Support</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <!-- Related Articles -->
+        <section class="related-articles">
+            <h2>Related Technical Resources</h2>
+            <div class="modular-grid modular-grid--3col">
+                <div class="modular-card modular-card--article">
+                    <div class="modular-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M11 20A7 7 0 0 1 11 4m0 16a7 7 0 0 0 0-16m0 16h8m-8-16h8"></path>
+                        </svg>
+                    </div>
+                    <h3 class="modular-card__title">LED Optical Design Principles</h3>
+                    <p class="modular-card__description">Learn about lens selection, beam angles, and optical efficiency for Cree LED applications.</p>
+                    <div class="modular-card__action">
+                        <a href="/support/technical-resources/optical-design" class="btn btn-secondary">Read Article</a>
+                    </div>
+                </div>
+                <div class="modular-card modular-card--article">
+                    <div class="modular-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"></path>
+                            <path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"></path>
+                            <path d="M12 2v2"></path>
+                            <path d="M12 22v-2"></path>
+                            <path d="m17 20.66-1-1.73"></path>
+                            <path d="M11 10.27 7 3.34"></path>
+                            <path d="m20.66 17-1.73-1"></path>
+                            <path d="m3.34 7 1.73 1"></path>
+                            <path d="M14 12h8"></path>
+                            <path d="M2 12h2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="modular-card__title">Driver Circuit Design for LEDs</h3>
+                    <p class="modular-card__description">Best practices for designing LED driver circuits to maximize Cree LED performance.</p>
+                    <div class="modular-card__action">
+                        <a href="/support/technical-resources/driver-design.html" class="btn btn-secondary">Read Article</a>
+                    </div>
+                </div>
+                <div class="modular-card modular-card--article">
+                    <div class="modular-card__icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="modular-card__title">LED Lifetime Estimation</h3>
+                    <p class="modular-card__description">Methods for predicting LED lifetime based on operating conditions and thermal management.</p>
+                    <div class="modular-card__action">
+                        <a href="/support/technical-resources/lifetime-estimation.html" class="btn btn-secondary">Read Article</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Need Thermal Design Support?</h2>
+                <p>Our expert team is ready to assist with your Cree LED thermal management design, from initial concept to production.</p>
+                <a href="/contact.html" class="btn btn-primary">Contact Our FAEs</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>LiTong Group</h3>
+                    <p>Authorized distributor of Cree LED and Wolfspeed SiC products with global reach and technical expertise.</p>
+                    <div class="contact-info">
+                        <p><strong>WhatsApp:</strong> +86 15013702378</p>
+                        <p><strong>WeChat:</strong> +86 18612518271</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="/products/cree-led.html">Cree LED</a></li>
+                        <li><a href="/products/wolfspeed-power.html">Wolfspeed Power</a></li>
+                        <li><a href="/products/cree-led/xlamp-xp-l.html">XLamp Series</a></li>
+                        <li><a href="/products/cree-led/j-series/j-2835.html">J Series</a></li>
+                        <li><a href="/products/wolfspeed-power/c3m0060065k.html">SiC MOSFETs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Solutions</h3>
+                    <ul>
+                        <li><a href="/solutions/outdoor-lighting.html">Outdoor Lighting</a></li>
+                        <li><a href="/solutions/horticultural-lighting.html">Horticultural Lighting</a></li>
+                        <li><a href="/solutions/ev-chargers.html">EV Charging</a></li>
+                        <li><a href="/solutions/solar-inverters.html">Solar Inverters</a></li>
+                        <li><a href="/solutions/portable-lighting.html">Portable Lighting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="/support/index.html">Technical Support</a></li>
+                        <li><a href="/support/selection-tools">Selection Tools</a></li>
+                        <li><a href="/support/design-resources">Design Resources</a></li>
+                        <li><a href="/support/fae-support">FAE Support</a></li>
+                        <li><a href="/support/sample-request">Sample Request</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> LiTong Group. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="300px" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Cree J Series J3030 LED</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#FF8F00" offset="0%"></stop>
+            <stop stop-color="#FF6F00" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect fill="url(#linearGradient-1)" x="0" y="0" width="400" height="300"></rect>
+        <g transform="translate(100.000000, 75.000000)">
+            <rect stroke="#FFFFFF" stroke-width="4" fill="#FFFFFF" fill-opacity="0.2" x="2" y="2" width="196" height="146" rx="10"></rect>
+            <g transform="translate(51.000000, 36.000000)">
+                <rect fill="#FFFFFF" x="0" y="0" width="98" height="14" rx="7"></rect>
+                <rect fill="#FFFFFF" x="0" y="29" width="98" height="14" rx="7"></rect>
+                <rect fill="#FFFFFF" x="0" y="58" width="98" height="14" rx="7"></rect>
+                <rect fill="#FFFFFF" x="0" y="87" width="98" height="14" rx="7"></rect>
+            </g>
+        </g>
+        <text x="200" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF">Cree J Series J3030 LED</text>
+    </g>
+</svg>
