@@ -3,456 +3,219 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technical Support & Resources | Cree LED & Wolfspeed SiC | LiTong Group</title>
-    <meta name="description" content="Access technical resources, application notes, and support for Cree LED and Wolfspeed SiC components. Design guides, selection tools, and engineering support.">
-    <meta name="keywords" content="Cree LED support, Wolfspeed SiC support, technical resources, LED design guide, SiC application notes">
+    <title>Technical Support | Cree & Wolfspeed Design Resources | LiTong Group</title>
+    <meta name="description" content="Technical support for Cree LED and Wolfspeed SiC products. Design resources, simulation models, application guides, and expert assistance.">
+    <meta name="keywords" content="cree support, wolfspeed support, technical support, design resources, application guide">
+    <link rel="canonical" href="https://cree.elec-distributor.com/support/">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://cree.elec-distributor.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Support",
-          "item": "https://cree.elec-distributor.com/support/"
-        }
-      ]
-    }
-    </script>
-    
-    <!-- Organization Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "LiTong Group",
-      "legalName": "LiTong Electronics Distributor Co.",
-      "url": "https://cree.elec-distributor.com",
-      "logo": "https://cree.elec-distributor.com/images/logo.svg",
-      "description": "Authorized distributor of Cree LED and Wolfspeed SiC products",
-      "foundingDate": "2005",
-      "contactPoint": [
-        {
-          "@type": "ContactPoint",
-          "telephone": "+86 15013702378",
-          "contactType": "customer service",
-          "areaServed": "Worldwide",
-          "availableLanguage": ["English"]
-        }
-      ]
-    }
-    </script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
 </head>
 <body>
-    <!-- Header Section -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="header">
         <div class="container">
             <div class="nav-wrapper">
                 <a href="/index.html" class="logo">
                     <img src="../images/logo.svg" alt="LiTong Group Logo" class="logo-img">
                 </a>
-                
                 <nav class="main-nav" aria-label="Main navigation">
                     <ul class="nav-menu" role="menubar">
-                        <li class="nav-item" role="none">
-                            <a href="/index.html" class="nav-link" role="menuitem">Home</a>
-                        </li>
+                        <li class="nav-item" role="none"><a href="/index.html" class="nav-link" role="menuitem">Home</a></li>
                         <li class="nav-item dropdown" role="none">
-                            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Products <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
+                            <a href="/products/" class="nav-link" role="menuitem" aria-haspopup="true">Products <span class="dropdown-arrow">▼</span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li class="dropdown-item" role="none">
-                                    <a href="/products/cree-led.html" class="dropdown-link" role="menuitem">Cree LED</a>
-                                </li>
-                                <li class="dropdown-item" role="none">
-                                    <a href="/products/wolfspeed-power.html" class="dropdown-link" role="menuitem">Wolfspeed Power</a>
-                                </li>
+                                <li class="dropdown-item" role="none"><a href="/products/cree-led.html" class="dropdown-link" role="menuitem">Cree LED</a></li>
+                                <li class="dropdown-item" role="none"><a href="/products/wolfspeed-power.html" class="dropdown-link" role="menuitem">Wolfspeed Power</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown" role="none">
-                            <a href="#" class="nav-link" role="menuitem" aria-haspopup="true" aria-expanded="false">Solutions <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li class="dropdown-item" role="none">
-                                    <a href="/solutions/outdoor-lighting.html" class="dropdown-link" role="menuitem">Outdoor Lighting</a>
-                                </li>
-                                <li class="dropdown-item" role="none">
-                                    <a href="/solutions/horticultural-lighting.html" class="dropdown-link" role="menuitem">Horticultural Lighting</a>
-                                </li>
-                                <li class="dropdown-item" role="none">
-                                    <a href="/solutions/ev-chargers.html" class="dropdown-link" role="menuitem">EV Chargers</a>
-                                </li>
-                                <li class="dropdown-item" role="none">
-                                    <a href="/solutions/solar-inverters.html" class="dropdown-link" role="menuitem">Solar Inverters</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="/support/index.html" class="nav-link active" role="menuitem">Support</a>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="/news/index.html" class="nav-link" role="menuitem">News</a>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="/about/index.html" class="nav-link" role="menuitem">About</a>
-                        </li>
-                        <li class="nav-item" role="none">
-                            <a href="/contact.html" class="nav-link cta-button" role="menuitem">Contact</a>
-                        </li>
+                        <li class="nav-item" role="none"><a href="/solutions/" class="nav-link" role="menuitem">Solutions</a></li>
+                        <li class="nav-item" role="none"><a href="/support/" class="nav-link active" role="menuitem">Support</a></li>
+                        <li class="nav-item" role="none"><a href="/blog/" class="nav-link" role="menuitem">Resources</a></li>
+                        <li class="nav-item" role="none"><a href="/contact.html" class="nav-link" role="menuitem">Contact</a></li>
                     </ul>
                 </nav>
-                
-                <button
-                  class="mobile-menu-toggle"
-                  aria-label="Toggle navigation menu"
-                  aria-expanded="false"
-                  aria-controls="mobile-nav">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
             </div>
         </div>
     </header>
 
-    <!-- Breadcrumb -->
-    <div class="container">
-        <div class="breadcrumb">
-            <a href="/index.html">Home</a> <span>/</span>
-            <span>Support</span>
+    <section class="page-hero" id="main-content">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Technical Support</h1>
+                <p class="hero-subtitle">Design Resources, Tools & Expert Assistance</p>
+                <div class="hero-cta">
+                    <a href="#support-options" class="btn btn-primary btn-large">Get Support</a>
+                    <a href="/contact.html" class="btn btn-secondary btn-large">Contact Us</a>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Support Page Content -->
-    <div class="container">
-        <section class="support-header">
-            <h1>Technical Support & Resources</h1>
-            <p class="support-subtitle">Comprehensive technical support, design resources, and application notes for Cree LED and Wolfspeed SiC components. Our experienced team is available to assist with your design challenges.</p>
-        </section>
-
-        <!-- Technical Resources Section -->
-        <section class="section">
-            <div class="section-header">
-                <h2>Technical Resources</h2>
-                <p>Comprehensive design guides, application notes, and documentation for Cree LED and Wolfspeed SiC components.</p>
-            </div>
-
-            <div class="modular-grid modular-grid--4col">
-                <div class="modular-card">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Design Guides & Selection Tools</h3>
-                    <ul class="resource-list">
-                        <li><a href="/support/selection-guides/led-selection-guide.html">Cree LED Product Selection Guide</a></li>
-                        <li><a href="/support/selection-guides/sic-selection.html">Wolfspeed SiC Component Selection Guide</a></li>
-                        <li><a href="/support/design-guides/thermal-design.html">Thermal Design for LEDs</a></li>
-                        <li><a href="/support/design-guides/optical-design.html">LED Optical Design Guide</a></li>
-                        <li><a href="/support/design-guides/gate-drive-design.html">SiC MOSFET Gate Drive Design</a></li>
-                        <li><a href="/support/design-guides/circuit-design.html">LED Circuit Design Guide</a></li>
-                    </ul>
-                </div>
-
-                <div class="modular-card">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Application Notes</h3>
-                    <ul class="resource-list">
-                        <li><a href="/support/application-notes/led-thermal-management.html">Effective Thermal Management for High-Power LEDs</a></li>
-                        <li><a href="/support/application-notes/sic-benefits.html">Benefits of SiC in Power Conversion Systems</a></li>
-                        <li><a href="/support/application-notes/led-driving.html">Proper LED Driving Techniques</a></li>
-                        <li><a href="/support/application-notes/sic-gate-drive.html">SiC MOSFET Gate Drive Considerations</a></li>
-                        <li><a href="/support/application-notes/led-binning.html">Understanding LED Binning Classifications</a></li>
-                        <li><a href="/support/application-notes/sic-diodes.html">Advantages of SiC Schottky Diodes</a></li>
-                    </ul>
-                </div>
-
-                <div class="modular-card">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
-                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Datasheets & Documentation</h3>
-                    <ul class="resource-list">
-                        <li><a href="/support/datasheets.html">Cree LED Datasheets</a></li>
-                        <li><a href="/support/datasheets.html">Wolfspeed SiC Datasheets</a></li>
-                        <li><a href="/support/index.html">Technical Briefs & White Papers</a></li>
-                        <li><a href="/support/quality-documents.html">Quality & Reliability Documents</a></li>
-                        <li><a href="/support/compliance.html">Compliance & Certifications</a></li>
-                        <li><a href="/support/design-tools.html">Cree Design Tools Access</a></li>
-                    </ul>
-                </div>
-
-                <div class="modular-card">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="23 7 16 12 23 17 23 7"></polygon>
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Video Tutorials</h3>
-                    <ul class="resource-list">
-                        <li><a href="/support/videos/thermal-design.html">Thermal Design Fundamentals</a></li>
-                        <li><a href="/support/videos/sic-advantages.html">Understanding SiC Advantages</a></li>
-                        <li><a href="/support/videos/optical-design.html">LED Optical Design Principles</a></li>
-                        <li><a href="/support/videos/pcb-layout.html">PCB Layout for Power Electronics</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Support Options Section -->
-        <section class="section">
-            <div class="section-header">
-                <h2>Get Technical Support</h2>
-                <p>Connect with our expert engineering team for assistance with your design challenges.</p>
-            </div>
-
-            <div class="modular-grid modular-grid--4col">
-                <div class="modular-card modular-card--feature">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Technical Email Support</h3>
-                    <p class="modular-card__description">Send detailed technical questions to our engineering team. Response time: 1-2 business days.</p>
-                    <div class="modular-card__action">
-                        <a href="/contact.html" class="btn btn-secondary">Contact Support</a>
-                    </div>
-                </div>
-
-                <div class="modular-card modular-card--feature">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Phone Consultation</h3>
-                    <p class="modular-card__description">Schedule a call with our technical specialists for complex design challenges.</p>
-                    <div class="modular-card__action">
-                        <a href="/contact.html" class="btn btn-secondary">Schedule Call</a>
-                    </div>
-                </div>
-
-                <div class="modular-card modular-card--feature">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                            <polyline points="2 17 12 22 22 17"></polyline>
-                            <polyline points="2 12 12 17 22 12"></polyline>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">Design Review</h3>
-                    <p class="modular-card__description">Submit your design for expert review and optimization recommendations.</p>
-                    <div class="modular-card__action">
-                        <a href="/contact.html" class="btn btn-secondary">Submit Design</a>
-                    </div>
-                </div>
-
-                <div class="modular-card modular-card--feature">
-                    <div class="modular-card__icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <h3 class="modular-card__title">On-Site Support</h3>
-                    <p class="modular-card__description">Our experts can provide on-site technical assistance at your facility (regional availability).</p>
-                    <div class="modular-card__action">
-                        <a href="/contact.html" class="btn btn-secondary">Request Visit</a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="technical-team">
-                <h3>Our Technical Team</h3>
-                <p>Our support team consists of experienced Field Application Engineers (FAEs) with deep expertise in LED and SiC technologies. They have:</p>
-                <ul>
-                    <li>Advanced degrees in electrical engineering and related fields</li>
-                    <li>Several years of experience in LED and power electronics applications</li>
-                    <li>Direct relationships with Cree and Wolfspeed technical teams</li>
-                    <li>Experience across multiple industries (lighting, automotive, industrial, etc.)</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="faq-section">
-            <h2>Technical FAQs</h2>
-            <div class="faq-container">
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h3>How do I determine the appropriate thermal management for my LED application?</h3>
-                        <span class="arrow">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Thermal management requirements depend on several factors: LED power consumption, ambient temperature, thermal resistance of the system, and desired operating life. A general rule is to maintain the LED junction temperature below the maximum rated value. Use Cree's thermal models and calculators to determine thermal resistance requirements for your specific application. Adequate heat sinking and proper thermal interface materials are critical for reliable operation.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h3>What are the advantages of SiC MOSFETs over traditional silicon MOSFETs?</h3>
-                        <span class="arrow">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>SiC MOSFETs offer several significant advantages over silicon devices: 1) Lower switching losses due to reduced reverse recovery in the body diode, 2) Higher switching frequencies enabling smaller magnetic components, 3) Higher temperature operation capability (up to 200°C), 4) Higher breakdown field strength allowing thinner devices with lower RDS(on). These benefits result in higher efficiency, higher power density, and reduced system size.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h3>How do I select the right LED for my lighting application?</h3>
-                        <span class="arrow">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>LED selection involves several key parameters: 1) Required luminous flux (lumens), 2) Color properties (CCT and CRI), 3) Package size constraints, 4) Operating current/voltage specifications, 5) Luminous efficacy requirements, 6) Cost constraints. Additionally, consider environmental factors like operating temperature, humidity, and required lifetime. Cree's selection guides and online tools can help narrow down the options based on your key requirements.</p>
-                    </div>
-                </div>
-                
-                <div class="accordion">
-                    <div class="accordion-header">
-                        <h3>What is the difference between Cree's XLamp and J Series LEDs?</h3>
-                        <span class="arrow">▼</span>
-                    </div>
-                    <div class="accordion-content">
-                        <p>Cree's XLamp series are high-power LEDs designed for applications requiring high lumen density and maximum optical performance. The J Series are mid-power LEDs optimized for applications where cost efficiency and ease of system design are important. J Series LEDs are available in 2835, 3030, and 5050 packages with lower thermal resistance and are easier to manufacture with. XLamp LEDs offer higher luminous efficacy and flux density.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Training Section -->
-        <section class="training-section">
-            <h2>Training & Education</h2>
-            <div class="training-grid">
-                <div class="training-card">
-                    <h3>LED Fundamentals Course</h3>
-                    <p>Comprehensive course covering LED technology basics, electrical properties, thermal management, and optical design principles.</p>
+    <section class="support-options" id="support-options">
+        <div class="container">
+            <h2>How Can We Help?</h2>
+            <div class="support-grid">
+                <div class="support-card">
+                    <div class="support-icon">📊</div>
+                    <h3>Design Resources</h3>
+                    <p>Access datasheets, application notes, and technical documentation</p>
                     <ul>
-                        <li>Self-paced online learning</li>
-                        <li>Certificate upon completion</li>
-                        <li>Real-world examples and exercises</li>
+                        <li>Product Datasheets</li>
+                        <li>Application Notes</li>
+                        <li>Reference Designs</li>
+                        <li>White Papers</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary">Enroll Now</a>
+                    <a href="#resources" class="btn btn-outline">Browse Resources</a>
                 </div>
-                
-                <div class="training-card">
-                    <h3>SiC Power Electronics Workshop</h3>
-                    <p>Hands-on workshop focused on SiC MOSFET and diode applications in power electronics systems.</p>
+                <div class="support-card">
+                    <div class="support-icon">💻</div>
+                    <h3>Simulation Tools</h3>
+                    <p>Download SPICE models and simulation files for your designs</p>
                     <ul>
-                        <li>Twice-monthly sessions</li>
-                        <li>Lab exercises with actual components</li>
-                        <li>Design tools and simulation included</li>
+                        <li>SPICE Models</li>
+                        <li>Thermal Models</li>
+                        <li>Optical Data Files</li>
+                        <li>Simulation Guides</li>
                     </ul>
-                    <a href="#" class="btn btn-secondary">Register</a>
+                    <a href="#simulation" class="btn btn-outline">Get Models</a>
                 </div>
-                
-                <div class="training-card">
-                    <h3>Custom Technical Training</h3>
-                    <p>On-site or virtual training tailored to your specific application and team requirements.</p>
+                <div class="support-card">
+                    <div class="support-icon">👨‍💻</div>
+                    <h3>Technical Assistance</h3>
+                    <p>Get help from our application engineers</p>
                     <ul>
-                        <li>Customized content</li>
-                        <li>Flexible scheduling</li>
-                        <li>Direct access to our FAEs</li>
+                        <li>Product Selection</li>
+                        <li>Design Review</li>
+                        <li>Troubleshooting</li>
+                        <li>Custom Solutions</li>
                     </ul>
-                    <a href="/contact.html" class="btn btn-secondary">Contact Us</a>
+                    <a href="/contact.html" class="btn btn-outline">Contact Support</a>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CTA Section -->
-        <section class="section cta-section-modern">
-            <div class="section-header">
-                <h2>Need Technical Assistance?</h2>
-                <p>Our expert engineering team is ready to support your design challenges from concept to production.</p>
+    <section class="resources-section alt-bg" id="resources">
+        <div class="container">
+            <h2>Technical Resources</h2>
+            <div class="resources-categories">
+                <div class="resource-category">
+                    <h3>📄 Documentation</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <h4><a href="/support/datasheets.html">Product Datasheets</a></h4>
+                            <p>Complete electrical, mechanical, and thermal specifications</p>
+                        </div>
+                        <div class="resource-item">
+                            <h4><a href="/support/application-notes.html">Application Notes</a></h4>
+                            <p>Detailed design guidance and best practices</p>
+                        </div>
+                        <div class="resource-item">
+                            <h4><a href="/support/technical-articles/">Technical Articles</a></h4>
+                            <p>In-depth technical analysis and comparison guides</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="resource-category">
+                    <h3>🔧 Design Tools</h3>
+                    <div class="resource-list">
+                        <div class="resource-item">
+                            <h4><a href="/support/simulation/spice-models.html">SPICE Models</a></h4>
+                            <p>Circuit simulation models for power devices</p>
+                        </div>
+                        <div class="resource-item">
+                            <h4><a href="/support/technical-articles/led-thermal-management.html">Thermal Calculators</a></h4>
+                            <p>Heat sink and thermal design tools</p>
+                        </div>
+                        <div class="resource-item">
+                            <h4><a href="/support/design-guides/led-optical-design.html">Optical Calculators</a></h4>
+                            <p>LED lumen and efficacy calculators</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="cta-buttons">
-                <a href="/contact.html" class="btn btn-primary">Contact Technical Support</a>
-                <a href="/support/design-guides.html" class="btn btn-secondary">Access Design Resources</a>
-            </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How do I select the right SiC MOSFET for my application?</h3>
+                    <p>Consider voltage rating, current requirements, switching frequency, and thermal constraints. Our <a href="/blog/sic-mosfet-selection-guide.html">SiC MOSFET Selection Guide</a> provides detailed guidance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Where can I find simulation models?</h3>
+                    <p>SPICE models are available for download on individual product pages or contact our support team for specific model requests.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you offer design review services?</h3>
+                    <p>Yes, our application engineers can review your schematic and PCB layout. Contact us with your design files for assistance.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How can I request samples?</h3>
+                    <p>Sample requests can be submitted through our contact form or by emailing sales@cree.elec-distributor.com</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section alt-bg">
+        <div class="container">
+            <h2>Contact Technical Support</h2>
+            <div class="contact-grid">
+                <div class="contact-method">
+                    <h3>📧 Email</h3>
+                    <p><a href="mailto:support@cree.elec-distributor.com">support@cree.elec-distributor.com</a></p>
+                    <p>Response within 24 hours</p>
+                </div>
+                <div class="contact-method">
+                    <h3>📞 Phone</h3>
+                    <p><a href="tel:+8615013702378">+86 15013702378</a></p>
+                    <p>Monday-Friday, 9AM-6PM CST</p>
+                </div>
+                <div class="contact-method">
+                    <h3>💬 Live Chat</h3>
+                    <p>Available on our website</p>
+                    <p>Business hours only</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h3>LiTong Group</h3>
-                    <p>Authorized distributor of Cree LED and Wolfspeed SiC products with global reach and technical expertise.</p>
-                    <div class="contact-info">
-                        <p><strong>WhatsApp:</strong> +86 15013702378</p>
-                        <p><strong>WeChat:</strong> +86 18612518271</p>
-                    </div>
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/support/">Technical Support</a></li>
+                        <li><a href="/blog/">Resources</a></li>
+                        <li><a href="/contact.html">Contact Us</a></li>
+                    </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Products</h3>
+                    <h4>Products</h4>
                     <ul>
                         <li><a href="/products/cree-led.html">Cree LED</a></li>
                         <li><a href="/products/wolfspeed-power.html">Wolfspeed Power</a></li>
-                        <li><a href="/products/cree-led/xlamp-xp-l.html">XLamp Series</a></li>
-                        <li><a href="/products/cree-led/j-series/j-2835.html">J Series</a></li>
-                        <li><a href="/products/wolfspeed-power/c3m0060065k.html">SiC MOSFETs</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Solutions</h3>
-                    <ul>
-                        <li><a href="/solutions/outdoor-lighting.html">Outdoor Lighting</a></li>
-                        <li><a href="/solutions/horticultural-lighting.html">Horticultural Lighting</a></li>
-                        <li><a href="/solutions/ev-chargers.html">EV Charging</a></li>
-                        <li><a href="/solutions/solar-inverters.html">Solar Inverters</a></li>
-                        <li><a href="/solutions/portable-lighting.html">Portable Lighting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><a href="/contact.html">Contact Information</a></li>
-                        <li><a href="/about/index.html">About Us</a></li>
-                        <li><a href="/support/index.html">Support</a></li>
-                        <li><a href="/news/index.html">News</a></li>
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                    </ul>
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:sales@cree.elec-distributor.com">sales@cree.elec-distributor.com</a></p>
+                    <p>Phone: <a href="tel:+8615013702378">+86 15013702378</a></p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> LiTong Group. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" aria-label="LinkedIn">LinkedIn</a>
-                    <a href="#" aria-label="Twitter">Twitter</a>
-                    <a href="#" aria-label="Facebook">Facebook</a>
-                </div>
+                <p>&copy; 2026 LiTong Group. Authorized Distributor of Cree & Wolfspeed Products.</p>
             </div>
         </div>
     </footer>
-
     <script src="../js/main.js"></script>
 </body>
 </html>

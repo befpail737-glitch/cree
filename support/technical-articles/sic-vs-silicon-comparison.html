@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SiC vs Silicon: Technical Comparison | Wolfspeed Technical Documentation</title>
+    <meta name="description" content="Detailed technical comparison of Silicon Carbide (SiC) MOSFETs versus traditional Silicon IGBTs. Material properties, switching performance, and application guidance.">
+    <meta name="keywords" content="SiC vs Silicon, SiC MOSFET comparison, Silicon Carbide technical guide, power electronics">
+    <link rel="canonical" href="https://cree.elec-distributor.com/support/technical-articles/sic-vs-silicon-comparison.html">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/performance.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/index.html" class="logo">
+                    <img src="../../images/logo.svg" alt="LiTong Group Logo" class="logo-img" width="150" height="40">
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none"><a href="/index.html" class="nav-link" role="menuitem">Home</a></li>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="/products/" class="nav-link" role="menuitem" aria-haspopup="true">Products <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item" role="none"><a href="/products/cree-led.html" class="dropdown-link" role="menuitem">Cree LED</a></li>
+                                <li class="dropdown-item" role="none"><a href="/products/wolfspeed-power.html" class="dropdown-link" role="menuitem">Wolfspeed Power</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" role="none"><a href="/solutions/" class="nav-link" role="menuitem">Solutions</a></li>
+                        <li class="nav-item" role="none"><a href="/support/" class="nav-link active" role="menuitem">Support</a></li>
+                        <li class="nav-item" role="none"><a href="/blog/" class="nav-link" role="menuitem">Resources</a></li>
+                        <li class="nav-item" role="none"><a href="/contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar-layout" id="main-content">
+        <aside class="sidebar-nav">
+            <div class="sidebar-nav__header">Technical Support</div>
+            <ul class="sidebar-nav__list">
+                <li class="sidebar-nav__item">
+                    <a href="/support/" class="sidebar-nav__link">Support Home</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/design-guides.html" class="sidebar-nav__link">Design Guides</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/application-notes.html" class="sidebar-nav__link">Application Notes</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/selection-guides/sic-selection.html" class="sidebar-nav__link">SiC Selection Guide</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/datasheets.html" class="sidebar-nav__link">Datasheets</a>
+                </li>
+                <li class="sidebar-nav__section">Technical Articles</li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/technical-articles/sic-vs-silicon-comparison.html" class="sidebar-nav__link active">SiC vs Silicon</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/technical-articles/led-thermal-management.html" class="sidebar-nav__link">LED Thermal Management</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="sidebar-layout__content">
+            <article class="tech-article">
+                <header class="article-header">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/support/">Support</a></li>
+                            <li><a href="/support/technical-articles/">Technical Articles</a></li>
+                            <li>SiC vs Silicon</li>
+                        </ol>
+                    </nav>
+                    
+                    <span class="article-category">Technical Article</span>
+                    <h1>SiC vs Silicon: Technical Comparison</h1>
+                    <div class="article-meta">
+                        <time datetime="2026-04-22">April 22, 2026</time>
+                        <span class="read-time">15 min read</span>
+                        <span class="doc-version">Doc v1.0</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <section class="executive-summary">
+                        <h2>Executive Summary</h2>
+                        <p>Silicon Carbide (SiC) MOSFETs offer significant advantages over traditional Silicon IGBTs for power electronics applications. This technical article provides a detailed comparison of material properties, electrical characteristics, and system-level performance to guide design decisions.</p>
+                        
+                        <div class="key-points">
+                            <h3>Key Findings</h3>
+                            <ul>
+                                <li>SiC provides <strong>3x wider bandgap</strong> enabling higher temperature operation</li>
+                                <li>Switching losses reduced by <strong>80-90%</strong> compared to IGBTs</li>
+                                <li>System efficiency improvements of <strong>2-5%</strong> typical</li>
+                                <li>Power density increased by <strong>3-5x</strong></li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="material-properties">
+                        <h2>1. Material Properties</h2>
+                        
+                        <h3>1.1 Bandgap Energy</h3>
+                        <p>The bandgap energy determines the maximum operating temperature and leakage current characteristics:</p>
+                        <ul>
+                            <li><strong>Silicon</strong>: 1.1 eV - Limited to T<sub>j</sub> < 150°C</li>
+                            <li><strong>SiC</strong>: 3.2 eV - Can operate at T<sub>j</sub> > 200°C</li>
+                        </ul>
+                        
+                        <h3>1.2 Critical Electric Field</h3>
+                        <p>SiC's 7x higher critical electric field (2.2 vs 0.3 MV/cm) enables:</p>
+                        <ul>
+                            <li>Thinner drift regions for lower on-resistance</li>
+                            <li>Higher voltage ratings with lower losses</li>
+                            <li>Higher power density</li>
+                        </ul>
+
+                        <table class="data-table">
+                            <caption>Material Property Comparison</caption>
+                            <thead>
+                                <tr>
+                                    <th>Property</th>
+                                    <th>Silicon</th>
+                                    <th>4H-SiC</th>
+                                    <th>Ratio</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bandgap (eV)</td>
+                                    <td>1.12</td>
+                                    <td>3.26</td>
+                                    <td>2.9x</td>
+                                </tr>
+                                <tr>
+                                    <td>Critical Field (MV/cm)</td>
+                                    <td>0.3</td>
+                                    <td>2.2</td>
+                                    <td>7.3x</td>
+                                </tr>
+                                <tr>
+                                    <td>Thermal Conductivity (W/cm·K)</td>
+                                    <td>1.5</td>
+                                    <td>4.9</td>
+                                    <td>3.3x</td>
+                                </tr>
+                                <tr>
+                                    <td>Saturated Drift Velocity (×10⁷ cm/s)</td>
+                                    <td>1.0</td>
+                                    <td>2.0</td>
+                                    <td>2.0x</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section id="device-characteristics">
+                        <h2>2. Device Characteristics</h2>
+                        
+                        <h3>2.1 On-State Characteristics</h3>
+                        <p>The fundamental difference in conduction behavior:</p>
+                        
+                        <h4>IGBT (Bipolar Device)</h4>
+                        <ul>
+                            <li>Fixed forward voltage drop: V<sub>CE(sat)</sub> = 1.5-3.0V</li>
+                            <li>Minority carrier conduction with tail current</li>
+                            <li>Better conduction at very high currents (>300A)</li>
+                        </ul>
+                        
+                        <h4>SiC MOSFET (Unipolar Device)</h4>
+                        <ul>
+                            <li>Resistive behavior: V<sub>DS</sub> = I<sub>D</sub> × R<sub>DS(on)</sub></li>
+                            <li>No tail current - faster turn-off</li>
+                            <li>Scales favorably at lower currents</li>
+                        </ul>
+
+                        <h3>2.2 Switching Characteristics</h3>
+                        
+                        <table class="data-table">
+                            <caption>Switching Performance Comparison (650V Class)</caption>
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>IGBT</th>
+                                    <th>SiC MOSFET</th>
+                                    <th>Improvement</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Turn-on Time</td>
+                                    <td>100-300 ns</td>
+                                    <td>20-50 ns</td>
+                                    <td>5-6x faster</td>
+                                </tr>
+                                <tr>
+                                    <td>Turn-off Time</td>
+                                    <td>200-600 ns</td>
+                                    <td>30-80 ns</td>
+                                    <td>7-10x faster</td>
+                                </tr>
+                                <tr>
+                                    <td>Switching Loss (E<sub>on</sub>+E<sub>off</sub>)</td>
+                                    <td>2-5 mJ</td>
+                                    <td>0.2-0.5 mJ</td>
+                                    <td>80-90% reduction</td>
+                                </tr>
+                                <tr>
+                                    <td>Max Switching Frequency</td>
+                                    <td>5-20 kHz</td>
+                                    <td>50-200 kHz</td>
+                                    <td>10x higher</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section id="thermal-performance">
+                        <h2>3. Thermal Performance</h2>
+                        
+                        <h3>3.1 Thermal Resistance</h3>
+                        <p>Thermal management is critical for both technologies, but SiC offers advantages:</p>
+                        
+                        <ul>
+                            <li><strong>Higher thermal conductivity</strong>: Better heat spreading</li>
+                            <li><strong>Higher T<sub>j(max)</sub></strong>: 175-200°C vs 150°C</li>
+                            <li><strong>Lower losses</strong>: Less heat generation</li>
+                        </ul>
+
+                        <h3>3.2 Thermal Derating</h3>
+                        <p>Both devices require derating at high temperatures, but SiC maintains performance better:</p>
+                        
+                        <div class="note-box">
+                            <strong>Note</strong>: Always consult the specific device datasheet for thermal derating curves. Operating above rated T<sub>j</sub> will reduce reliability and lifetime.
+                        </div>
+                    </section>
+
+                    <section id="application-analysis">
+                        <h2>4. Application-Specific Analysis</h2>
+                        
+                        <h3>4.1 EV Charging (DC Fast Chargers)</h3>
+                        
+                        <table class="data-table">
+                            <caption>EV Charger Performance Comparison</caption>
+                            <thead>
+                                <tr>
+                                    <th>Metric</th>
+                                    <th>IGBT</th>
+                                    <th>SiC MOSFET</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Peak Efficiency</td>
+                                    <td>94-95%</td>
+                                    <td>97-98%</td>
+                                </tr>
+                                <tr>
+                                    <td>Power Density</td>
+                                    <td>~1 kW/L</td>
+                                    <td>~3 kW/L</td>
+                                </tr>
+                                <tr>
+                                    <td>Cooling</td>
+                                    <td>Liquid required</td>
+                                    <td>Air often sufficient</td>
+                                </tr>
+                                <tr>
+                                    <td>Filter Size</td>
+                                    <td>Large (10-20 kHz)</td>
+                                    <td>Small (50-100 kHz)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>4.2 Solar Inverters</h3>
+                        <p>SiC enables significant improvements:</p>
+                        <ul>
+                            <li>Efficiency: 99% vs 97% (European efficiency)</li>
+                            <li>Switching frequency: 50-100 kHz vs 10-20 kHz</li>
+                            <li>Filter inductor: 50-70% smaller and lighter</li>
+                            <li>Heat sink: 30-50% reduction in size</li>
+                        </ul>
+
+                        <h3>4.3 Motor Drives</h3>
+                        <p>For variable frequency drives:</p>
+                        <ul>
+                            <li>Better efficiency at partial loads</li>
+                            <li>Higher switching frequency reduces motor noise</li>
+                            <li>Reduced dv/dt filtering requirements</li>
+                        </ul>
+                    </section>
+
+                    <section id="cost-analysis">
+                        <h2>5. Cost Analysis</h2>
+                        
+                        <h3>5.1 Component Cost</h3>
+                        <p>SiC devices typically cost 2-3x more than comparable IGBTs:</p>
+                        <ul>
+                            <li>650V/50A IGBT: $8-15</li>
+                            <li>650V/50A SiC MOSFET: $15-30</li>
+                        </ul>
+
+                        <h3>5.2 System Cost</h3>
+                        <p>However, system-level costs often favor SiC:</p>
+                        
+                        <table class="data-table">
+                            <caption>System Cost Comparison (50kW Inverter)</caption>
+                            <thead>
+                                <tr>
+                                    <th>Component</th>
+                                    <th>IGBT System</th>
+                                    <th>SiC System</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Power Devices</td>
+                                    <td>$100</td>
+                                    <td>$200</td>
+                                </tr>
+                                <tr>
+                                    <td>Gate Drivers</td>
+                                    <td>$30</td>
+                                    <td>$40</td>
+                                </tr>
+                                <tr>
+                                    <td>Heat Sink</td>
+                                    <td>$50</td>
+                                    <td>$25</td>
+                                </tr>
+                                <tr>
+                                    <td>Passives/Filters</td>
+                                    <td>$80</td>
+                                    <td>$50</td>
+                                </tr>
+                                <tr>
+                                    <td>Enclosure/Cooling</td>
+                                    <td>$70</td>
+                                    <td>$40</td>
+                                </tr>
+                                <tr class="total">
+                                    <td><strong>Total BOM</strong></td>
+                                    <td><strong>$330</strong></td>
+                                    <td><strong>$355</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>5.3 Operating Cost Savings</h3>
+                        <p>The real savings come from improved efficiency:</p>
+                        <ul>
+                            <li>2-5% efficiency improvement</li>
+                            <li>For 50kW system at 8 hrs/day: $500-1,500/year</li>
+                            <li>Payback period: 1-2 years typically</li>
+                        </ul>
+                    </section>
+
+                    <section id="selection-guidelines">
+                        <h2>6. Selection Guidelines</h2>
+                        
+                        <h3>6.1 Choose SiC When:</h3>
+                        <ul>
+                            <li>Switching frequency > 20 kHz required</li>
+                            <li>System efficiency target > 96%</li>
+                            <li>Power density is critical</li>
+                            <li>Cooling is constrained</li>
+                            <li>Operating ambient > 50°C</li>
+                            <li>Total cost of ownership is primary concern</li>
+                        </ul>
+
+                        <h3>6.2 IGBT May Be Preferred When:</h3>
+                        <ul>
+                            <li>Switching frequency < 10 kHz</li>
+                            <li>Component cost is primary constraint</li>
+                            <li>Very high current (>300A continuous)</li>
+                            <li>Short product lifetime</li>
+                            <li>Existing IGBT-based designs with no performance issues</li>
+                        </ul>
+
+                        <div class="warning-box">
+                            <strong>Important</strong>: This is a general guideline. Always evaluate specific application requirements and perform detailed analysis before making final device selection.
+                        </div>
+                    </section>
+
+                    <section id="references">
+                        <h2>7. References</h2>
+                        <ul>
+                            <li>Wolfspeed Application Note: CPW-AN-XX-SiC-vs-Si</li>
+                            <li>IEEE Transactions on Power Electronics, Vol. 35, 2020</li>
+                            <li>PCIM Europe 2023 Conference Proceedings</li>
+                            <li>Wolfspeed C3M Datasheets</li>
+                        </ul>
+                    </section>
+
+                    <section id="related-documents">
+                        <h2>Related Documents</h2>
+                        <ul>
+                            <li><a href="/support/design-guides/gate-drive-design.html">SiC Gate Drive Design Guide</a></li>
+                            <li><a href="/support/selection-guides/sic-selection.html">SiC MOSFET Selection Guide</a></li>
+                            <li><a href="/support/application-notes/sic-gate-drive.html">SiC Gate Drive Application Note</a></li>
+                            <li><a href="/products/wolfspeed-power.html">Wolfspeed Product Catalog</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/support/">Technical Support</a></li>
+                        <li><a href="/support/design-guides.html">Design Guides</a></li>
+                        <li><a href="/support/application-notes.html">Application Notes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="/products/wolfspeed-power.html">Wolfspeed Power</a></li>
+                        <li><a href="/products/cree-led.html">Cree LED</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:support@cree.elec-distributor.com">support@cree.elec-distributor.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LiTong Group. Authorized Distributor of Cree & Wolfspeed Products.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../../js/main.js" defer></script>
+</body>
+</html>

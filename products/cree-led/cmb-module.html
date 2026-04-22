@@ -228,7 +228,11 @@
 
             <div class="product-detail-grid">
                 <div class="product-image-section">
-                    <img src="../../images/cmb-module.jpg" alt="Cree CMB LED Module" class="product-image">
+                    <picture>
+                        <source srcset="../../images/cmb-module.webp" type="image/webp">
+                        <source srcset="../../images/cmb-module.jpg" type="image/jpeg">
+                        <img src="../../images/cmb-module.jpg" alt="Cree CMB LED Module" class="product-image" loading="lazy" width="600" height="400">
+                    </picture>
                 </div>
 
                 <div class="product-info-section">

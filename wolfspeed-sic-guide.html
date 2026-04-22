@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wolfspeed SiC Guide | SiC MOSFETs & Diodes Explained | LiTong Group</title>
+    <meta name="description" content="Complete guide to Wolfspeed SiC power devices. Learn about SiC MOSFETs, SiC diodes, and their advantages over silicon. Applications in EV, solar, and industrial power.">
+    <meta name="keywords" content="Wolfspeed SiC Guide, SiC MOSFET, Silicon Carbide, SiC Diode, SiC vs Silicon, Wolfspeed C3M">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    </noscript>
+    
+    <link rel="canonical" href="https://cree.elec-distributor.com/wolfspeed-sic-guide.html" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://cree.elec-distributor.com/"},
+        {"@type": "ListItem", "position": 2, "name": "Wolfspeed SiC Guide", "item": "https://cree.elec-distributor.com/wolfspeed-sic-guide.html"}
+      ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TechArticle",
+      "headline": "Wolfspeed SiC Guide",
+      "description": "Complete guide to Wolfspeed SiC power devices and applications",
+      "author": {"@type": "Organization", "name": "LiTong Group"},
+      "publisher": {"@type": "Organization", "name": "LiTong Group"},
+      "datePublished": "2026-04-22",
+      "dateModified": "2026-04-22"
+    }
+    </script>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/index.html" class="logo">
+                    <img src="images/logo.svg" alt="LiTong Group Logo" class="logo-img">
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none"><a href="/index.html" class="nav-link" role="menuitem">Home</a></li>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="#" class="nav-link active" role="menuitem">Products <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item"><a href="/products/cree-led.html" class="dropdown-link">Cree LED</a></li>
+                                <li class="dropdown-item"><a href="/products/wolfspeed-power.html" class="dropdown-link">Wolfspeed Power</a></li>
+                                <li class="dropdown-item"><a href="/wolfspeed-sic-guide.html" class="dropdown-link">SiC Guide</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="#" class="nav-link" role="menuitem">Distributor <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item"><a href="/cree-distributor.html" class="dropdown-link">Global</a></li>
+                                <li class="dropdown-item"><a href="/cree-distributor-usa.html" class="dropdown-link">USA</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" role="none"><a href="/contact.html" class="nav-link cta-button" role="menuitem">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="/index.html">Home</a> <span>/</span>
+            <span>Wolfspeed SiC Guide</span>
+        </div>
+    </div>
+
+    <section class="hero" id="main-content">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Wolfspeed SiC Power Devices Guide</h1>
+                <p class="hero-subtitle">Complete guide to Silicon Carbide (SiC) power devices. Learn about SiC MOSFETs, SiC diodes, and why they're revolutionizing power electronics in EV, renewable energy, and industrial applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="guide-intro">
+            <h2>What is Silicon Carbide (SiC)?</h2>
+            <p>Silicon Carbide (SiC) is a wide bandgap semiconductor material that offers significant advantages over traditional silicon (Si) in power electronics applications. Wolfspeed, formerly Cree's Power and RF division, is the global leader in SiC technology.</p>
+            
+            <div class="guide-nav">
+                <h3>Quick Navigation</h3>
+                <ul>
+                    <li><a href="#advantages">SiC vs Silicon Advantages</a></li>
+                    <li><a href="#mosfets">SiC MOSFETs</a></li>
+                    <li><a href="#diodes">SiC Diodes</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#selection">Selection Guide</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="advantages" class="advantages-section">
+            <h2>SiC vs Silicon: Key Advantages</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card">
+                    <h3>⚡ Higher Efficiency</h3>
+                    <p>SiC devices have lower switching losses and conduction losses compared to silicon IGBTs and MOSFETs. This translates to higher system efficiency, often 2-5% improvement.</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>🌡️ Higher Temperature Operation</h3>
+                    <p>SiC can operate at junction temperatures up to 200°C or higher, compared to 150°C for silicon. This enables smaller cooling systems and higher power density.</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>📈 Higher Switching Frequencies</h3>
+                    <p>SiC devices can switch at much higher frequencies (100kHz+) compared to silicon IGBTs (20kHz). This allows smaller magnetics and passive components.</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>🔧 Higher Breakdown Voltage</h3>
+                    <p>SiC's wider bandgap enables higher breakdown voltages with thinner drift regions, reducing on-resistance for high-voltage devices.</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>💰 System Cost Reduction</h3>
+                    <p>While SiC devices cost more than silicon, system-level savings from smaller cooling, magnetics, and enclosures often result in lower total cost.</p>
+                </div>
+                <div class="comparison-card">
+                    <h3>🎯 Smaller Form Factor</h3>
+                    <p>Higher efficiency and switching frequency enable more compact designs, critical for space-constrained applications like EVs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="mosfets" class="product-section">
+            <h2>Wolfspeed SiC MOSFETs</h2>
+            <p>Wolfspeed's C3M SiC MOSFET family offers industry-leading performance with the industry's lowest on-resistance and highest quality.</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>C3M 650V Series</h3>
+                    <ul>
+                        <li>Voltage rating: 650V</li>
+                        <li>On-resistance: 15mΩ to 60mΩ</li>
+                        <li>Best for: EV onboard chargers, solar inverters</li>
+                        <li>TO-247, TO-263, D2PAK packages</li>
+                    </ul>
+                    <p><strong>Applications:</strong> EV charging, server power, telecom</p>
+                    <a href="/products/wolfspeed-power/c3m-650v.html" class="btn btn-secondary">View 650V MOSFETs</a>
+                </div>
+                <div class="product-card">
+                    <h3>C3M 900V Series</h3>
+                    <ul>
+                        <li>Voltage rating: 900V</li>
+                        <li>On-resistance: 20mΩ to 65mΩ</li>
+                        <li>Best for: Industrial drives, power supplies</li>
+                        <li>Optimized for hard-switching</li>
+                    </ul>
+                    <p><strong>Applications:</strong> Motor drives, welding, UPS</p>
+                    <a href="/products/wolfspeed-power/c3m-900v.html" class="btn btn-secondary">View 900V MOSFETs</a>
+                </div>
+                <div class="product-card">
+                    <h3>C3M 1200V Series</h3>
+                    <ul>
+                        <li>Voltage rating: 1200V</li>
+                        <li>On-resistance: 32mΩ to 80mΩ</li>
+                        <li>Best for: EV traction inverters, solar</li>
+                        <li>Highest power applications</li>
+                    </ul>
+                    <p><strong>Applications:</strong> EV inverters, grid-tie solar, industrial</p>
+                    <a href="/products/wolfspeed-power/c3m-1200v.html" class="btn btn-secondary">View 1200V MOSFETs</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="diodes" class="product-section">
+            <h2>Wolfspeed SiC Schottky Diodes</h2>
+            <p>SiC Schottky diodes offer zero reverse recovery, enabling higher efficiency and reduced EMI in power factor correction (PFC) and rectifier circuits.</p>
+            
+            <div class="product-grid">
+                <div class="product-card">
+                    <h3>C3D 650V Diodes</h3>
+                    <ul>
+                        <li>Voltage rating: 650V</li>
+                        <li>Current: 2A to 20A</li>
+                        <li>Zero reverse recovery</li>
+                        <li>Low forward voltage</li>
+                    </ul>
+                    <p><strong>Applications:</strong> PFC, boost converters, rectifiers</p>
+                </div>
+                <div class="product-card">
+                    <h3>C3D 1200V Diodes</h3>
+                    <ul>
+                        <li>Voltage rating: 1200V</li>
+                        <li>Current: 5A to 30A</li>
+                        <li>High surge capability</li>
+                        <li>Excellent thermal performance</li>
+                    </ul>
+                    <p><strong>Applications:</strong> Solar inverters, EV chargers, industrial</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="applications" class="applications-section">
+            <h2>SiC Applications</h2>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h3>🚗 Electric Vehicles</h3>
+                    <p>SiC is enabling the EV revolution with higher efficiency inverters, onboard chargers, and DC-DC converters. Smaller size and lighter weight extend vehicle range.</p>
+                    <ul>
+                        <li>Traction inverters (main drive)</li>
+                        <li>Onboard chargers (OBC)</li>
+                        <li>DC-DC converters</li>
+                        <li>EV charging stations</li>
+                    </ul>
+                    <p><strong>Benefits:</strong> 5-10% range extension, faster charging</p>
+                </div>
+                <div class="app-card">
+                    <h3>☀️ Solar & Renewable Energy</h3>
+                    <p>SiC enables higher efficiency solar inverters with smaller size and lower cooling requirements. Critical for utility-scale and residential solar.</p>
+                    <ul>
+                        <li>String inverters</li>
+                        <li>Central inverters</li>
+                        <li>Energy storage systems</li>
+                        <li>Wind power converters</li>
+                    </ul>
+                    <p><strong>Benefits:</strong> 99%+ efficiency, higher power density</p>
+                </div>
+                <div class="app-card">
+                    <h3>🏭 Industrial Power</h3>
+                    <p>Industrial motor drives, welding equipment, and power supplies benefit from SiC's high efficiency and reliability in harsh environments.</p>
+                    <ul>
+                        <li>Variable frequency drives (VFD)</li>
+                        <li>Welding power supplies</li>
+                        <li>Industrial UPS</li>
+                        <li>Induction heating</li>
+                    </ul>
+                    <p><strong>Benefits:</strong> Reduced energy costs, compact designs</p>
+                </div>
+                <div class="app-card">
+                    <h3>🔌 Power Supplies</h3>
+                    <p>Server power supplies, telecom rectifiers, and consumer adapters achieve higher efficiency and power density with SiC.</p>
+                    <ul>
+                        <li>Server and datacenter PSU</li>
+                        <li>Telecom rectifiers</li>
+                        <li>Adapter chargers</li>
+                        <li>LED drivers</li>
+                    </ul>
+                    <p><strong>Benefits:</strong> Titanium efficiency, compact size</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="selection" class="selection-guide">
+            <h2>SiC Device Selection Guide</h2>
+            
+            <div class="selection-steps">
+                <div class="step">
+                    <h3>1. Determine Voltage Rating</h3>
+                    <ul>
+                        <li><strong>650V:</strong> EV chargers, server PSU, telecom (up to 400V bus)</li>
+                        <li><strong>900V:</strong> Industrial drives, welding (up to 600V bus)</li>
+                        <li><strong>1200V:</strong> EV inverters, solar, grid applications (up to 800V bus)</li>
+                    </ul>
+                </div>
+                <div class="step">
+                    <h3>2. Calculate Current Requirements</h3>
+                    <p>Determine RMS and peak current requirements. Consider derating for temperature and reliability. Wolfspeed devices offer excellent current density.</p>
+                </div>
+                <div class="step">
+                    <h3>3. Select Package</h3>
+                    <ul>
+                        <li><strong>TO-247:</strong> Through-hole, excellent thermal performance</li>
+                        <li><strong>TO-263/D2PAK:</strong> Surface mount, automated assembly</li>
+                        <li><strong>Modules:</strong> High power, integrated solutions</li>
+                    </ul>
+                </div>
+                <div class="step">
+                    <h3>4. Design Considerations</h3>
+                    <ul>
+                        <li>Gate drive requirements (18V recommended)</li>
+                        <li>PCB layout for minimized parasitics</li>
+                        <li>Thermal management design</li>
+                        <li>EMI filtering (lower than silicon)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>Ready to Design with Wolfspeed SiC?</h2>
+                <p>Our technical team can help you select the right SiC devices for your application. Contact us for samples, evaluation kits, and design support.</p>
+                <div class="cta-buttons">
+                    <a href="/contact.html" class="btn btn-primary">Contact SiC Experts</a>
+                    <a href="/products/wolfspeed-power.html" class="btn btn-secondary">Browse Wolfspeed Products</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>LiTong Group</h3>
+                    <p>Authorized Wolfspeed distributor with global reach.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="/wolfspeed-sic-guide.html">SiC Guide</a></li>
+                        <li><a href="/products/wolfspeed-power.html">Wolfspeed Products</a></li>
+                        <li><a href="/cree-distributor.html">Find a Distributor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> LiTong Group. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LED Thermal Management Guide | Cree Technical Documentation</title>
+    <meta name="description" content="Comprehensive guide to LED thermal management. Learn about heat sink selection, thermal interface materials, PCB design, and junction temperature calculations for Cree LEDs.">
+    <meta name="keywords" content="LED thermal management, heat sink design, junction temperature, thermal resistance, Cree LED cooling">
+    <link rel="canonical" href="https://cree.elec-distributor.com/support/technical-articles/led-thermal-management.html">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/performance.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../../images/favicon.ico">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="/index.html" class="logo">
+                    <img src="../../images/logo.svg" alt="LiTong Group Logo" class="logo-img" width="150" height="40">
+                </a>
+                <nav class="main-nav" aria-label="Main navigation">
+                    <ul class="nav-menu" role="menubar">
+                        <li class="nav-item" role="none"><a href="/index.html" class="nav-link" role="menuitem">Home</a></li>
+                        <li class="nav-item dropdown" role="none">
+                            <a href="/products/" class="nav-link" role="menuitem" aria-haspopup="true">Products <span class="dropdown-arrow">▼</span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="dropdown-item" role="none"><a href="/products/cree-led.html" class="dropdown-link" role="menuitem">Cree LED</a></li>
+                                <li class="dropdown-item" role="none"><a href="/products/wolfspeed-power.html" class="dropdown-link" role="menuitem">Wolfspeed Power</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item" role="none"><a href="/solutions/" class="nav-link" role="menuitem">Solutions</a></li>
+                        <li class="nav-item" role="none"><a href="/support/" class="nav-link active" role="menuitem">Support</a></li>
+                        <li class="nav-item" role="none"><a href="/blog/" class="nav-link" role="menuitem">Resources</a></li>
+                        <li class="nav-item" role="none"><a href="/contact.html" class="nav-link" role="menuitem">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar-layout" id="main-content">
+        <aside class="sidebar-nav">
+            <div class="sidebar-nav__header">Technical Support</div>
+            <ul class="sidebar-nav__list">
+                <li class="sidebar-nav__item">
+                    <a href="/support/" class="sidebar-nav__link">Support Home</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/design-guides.html" class="sidebar-nav__link">Design Guides</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/application-notes.html" class="sidebar-nav__link">Application Notes</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/selection-guides/led-selection.html" class="sidebar-nav__link">LED Selection Guide</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/datasheets.html" class="sidebar-nav__link">Datasheets</a>
+                </li>
+                <li class="sidebar-nav__section">Technical Articles</li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/technical-articles/sic-vs-silicon-comparison.html" class="sidebar-nav__link">SiC vs Silicon</a>
+                </li>
+                <li class="sidebar-nav__item">
+                    <a href="/support/technical-articles/led-thermal-management.html" class="sidebar-nav__link active">LED Thermal Management</a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="sidebar-layout__content">
+            <article class="tech-article">
+                <header class="article-header">
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <ol>
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/support/">Support</a></li>
+                            <li><a href="/support/technical-articles/">Technical Articles</a></li>
+                            <li>LED Thermal Management</li>
+                        </ol>
+                    </nav>
+                    
+                    <span class="article-category">Technical Article</span>
+                    <h1>LED Thermal Management Guide</h1>
+                    <div class="article-meta">
+                        <time datetime="2026-04-22">April 22, 2026</time>
+                        <span class="read-time">18 min read</span>
+                        <span class="doc-version">Doc v1.0</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <section class="executive-summary">
+                        <h2>Executive Summary</h2>
+                        <p>Thermal management is critical for LED performance and reliability. This guide provides comprehensive information on heat sink selection, thermal interface materials, PCB design, and thermal calculations to ensure optimal LED operation.</p>
+                        
+                        <div class="key-points">
+                            <h3>Key Points</h3>
+                            <ul>
+                                <li>LED junction temperature directly affects efficacy and lifetime</li>
+                                <li>Every 10°C reduction can double LED lifetime</li>
+                                <li>Thermal resistance is additive: R<sub>θJA</sub> = R<sub>θJC</sub> + R<sub>θCS</sub> + R<sub>θSA</sub></li>
+                                <li>Proper thermal design is essential for high-power LED applications</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <section id="thermal-basics">
+                        <h2>1. LED Thermal Basics</h2>
+                        
+                        <h3>1.1 Why Thermal Management Matters</h3>
+                        <p>LED performance is highly temperature-dependent:</p>
+                        <ul>
+                            <li><strong>Efficacy decreases</strong>: -0.3% to -0.5% per °C for white LEDs</li>
+                            <li><strong>Wavelength shifts</strong>: Color changes with temperature</li>
+                            <li><strong>Lifetime reduces</strong>: Arrhenius relationship with temperature</li>
+                            <li><strong>Reliability degrades</strong>: Higher failure rates at elevated temperatures</li>
+                        </ul>
+
+                        <h3>1.2 Understanding Junction Temperature</h3>
+                        <p>The junction temperature (T<sub>j</sub>) is the critical parameter:</p>
+                        
+                        <div class="formula-box">
+                            <h4>Junction Temperature Calculation</h4>
+                            <p class="formula">T<sub>j</sub> = T<sub>a</sub> + (R<sub>θJA</sub> × P<sub>d</sub>)</p>
+                            <p>Where:<br>
+                            T<sub>j</sub> = Junction temperature (°C)<br>
+                            T<sub>a</sub> = Ambient temperature (°C)<br>
+                            R<sub>θJA</sub> = Thermal resistance, junction to ambient (°C/W)<br>
+                            P<sub>d</sub> = Power dissipation (W)</p>
+                        </div>
+
+                        <h3>1.3 Thermal Resistance Network</h3>
+                        <p>Thermal resistance is the sum of all resistances in the heat flow path:</p>
+                        
+                        <div class="formula-box">
+                            <h4>Total Thermal Resistance</h4>
+                            <p class="formula">R<sub>θJA</sub> = R<sub>θJC</sub> + R<sub>θCS</sub> + R<sub>θSA</sub></p>
+                            <p>Where:<br>
+                            R<sub>θJC</sub> = Junction to case (device dependent)<br>
+                            R<sub>θCS</sub> = Case to heat sink (interface material)<br>
+                            R<sub>θSA</sub> = Heat sink to ambient (heat sink design)</p>
+                        </div>
+                    </section>
+
+                    <section id="heat-sink-selection">
+                        <h2>2. Heat Sink Selection</h2>
+                        
+                        <h3>2.1 Heat Sink Thermal Resistance</h3>
+                        <p>The required heat sink thermal resistance can be calculated:</p>
+                        
+                        <div class="formula-box">
+                            <h4>Required Heat Sink Resistance</h4>
+                            <p class="formula">R<sub>θSA</sub> = (T<sub>j(max)</sub> - T<sub>a</sub>) / P<sub>d</sub> - R<sub>θJC</sub> - R<sub>θCS</sub></p>
+                        </div>
+
+                        <h3>2.2 Heat Sink Types</h3>
+                        
+                        <table class="data-table">
+                            <caption>Heat Sink Comparison</caption>
+                            <thead>
+                                <tr>
+                                    <th>Type</th>
+                                    <th>Thermal Performance</th>
+                                    <th>Cost</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Extruded Aluminum</td>
+                                    <td>Good (1-5°C/W)</td>
+                                    <td>Low</td>
+                                    <td>General purpose, low-mid power</td>
+                                </tr>
+                                <tr>
+                                    <td>Stamped Aluminum</td>
+                                    <td>Fair (3-10°C/W)</td>
+                                    <td>Very Low</td>
+                                    <td>Low power, cost-sensitive</td>
+                                </tr>
+                                <tr>
+                                    <td>Bonded Fin</td>
+                                    <td>Very Good (0.5-3°C/W)</td>
+                                    <td>Medium</td>
+                                    <td>High power, space constrained</td>
+                                </tr>
+                                <tr>
+                                    <td>Heat Pipe</td>
+                                    <td>Excellent (0.2-1°C/W)</td>
+                                    <td>High</td>
+                                    <td>Very high power, tight spaces</td>
+                                </tr>
+                                <tr>
+                                    <td>Liquid Cooling</td>
+                                    <td>Superior (<0.1°C/W)</td>
+                                    <td>Very High</td>
+                                    <td>Extreme power, dense arrays</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>2.3 Heat Sink Design Factors</h3>
+                        <p>Several factors affect heat sink performance:</p>
+                        <ul>
+                            <li><strong>Surface area</strong>: More fins = better performance</li>
+                            <li><strong>Fin density</strong>: Optimal spacing for airflow</li>
+                            <li><strong>Material</strong>: Aluminum (cheaper) vs Copper (better)</li>
+                            <li><strong>Airflow</strong>: Natural convection vs forced air</li>
+                            <li><strong>Orientation</strong>: Vertical fins for natural convection</li>
+                        </ul>
+
+                        <h3>2.4 Natural vs Forced Convection</h3>
+                        
+                        <table class="data-table">
+                            <caption>Cooling Method Comparison</caption>
+                            <thead>
+                                <tr>
+                                    <th>Parameter</th>
+                                    <th>Natural Convection</th>
+                                    <th>Forced Convection</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Heat Transfer Coefficient</td>
+                                    <td>5-25 W/m²K</td>
+                                    <td>25-250 W/m²K</td>
+                                </tr>
+                                <tr>
+                                    <td>Heat Sink Size</td>
+                                    <td>Large</td>
+                                    <td>Compact</td>
+                                </tr>
+                                <tr>
+                                    <td>Noise</td>
+                                    <td>Silent</td>
+                                    <td>Fan noise</td>
+                                </tr>
+                                <tr>
+                                    <td>Reliability</td>
+                                    <td>Higher (no moving parts)</td>
+                                    <td>Lower (fan wear)</td>
+                                </tr>
+                                <tr>
+                                    <td>Cost</td>
+                                    <td>Lower</td>
+                                    <td>Higher</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section id="thermal-interface">
+                        <h2>3. Thermal Interface Materials</h2>
+                        
+                        <h3>3.1 Types of TIMs</h3>
+                        
+                        <table class="data-table">
+                            <caption>Thermal Interface Material Comparison</caption>
+                            <thead>
+                                <tr>
+                                    <th>Material Type</th>
+                                    <th>Thermal Conductivity</th>
+                                    <th>Application</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Thermal Grease/Paste</td>
+                                    <td>1-10 W/mK</td>
+                                    <td>General purpose, reworkable</td>
+                                </tr>
+                                <tr>
+                                    <td>Thermal Pads</td>
+                                    <td>1-15 W/mK</td>
+                                    <td>Easy assembly, consistent thickness</td>
+                                </tr>
+                                <tr>
+                                    <td>Phase Change</td>
+                                    <td>3-8 W/mK</td>
+                                    <td>High reliability, long-term stability</td>
+                                </tr>
+                                <tr>
+                                    <td>Graphite Sheets</td>
+                                    <td>300-1500 W/mK (in-plane)</td>
+                                    <td>High performance, space constrained</td>
+                                </tr>
+                                <tr>
+                                    <td>Metal Foils (Indium)</td>
+                                    <td>80-100 W/mK</td>
+                                    <td>Highest performance, expensive</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>3.2 TIM Application Guidelines</h3>
+                        <ul>
+                            <li><strong>Amount</strong>: Thin layer (~0.1mm) for grease, proper thickness for pads</li>
+                            <li><strong>Coverage</strong>: Full contact area between surfaces</li>
+                            <li><strong>Pressure</strong>: Adequate mounting pressure (check datasheet)</li>
+                            <li><strong>Surface finish</strong>: Smooth surfaces reduce thermal resistance</li>
+                        </ul>
+
+                        <div class="note-box">
+                            <strong>Note</strong>: Even with good TIM, the interface resistance R<sub>θCS</sub> is typically 0.1-0.5°C/W. Minimizing this is crucial for high-power applications.
+                        </div>
+                    </section>
+
+                    <section id="pcb-design">
+                        <h2>4. PCB Thermal Design</h2>
+                        
+                        <h3>4.1 PCB Types for LEDs</h3>
+                        
+                        <table class="data-table">
+                            <caption>PCB Type Comparison for LED Applications</caption>
+                            <thead>
+                                <tr>
+                                    <th>PCB Type</th>
+                                    <th>Thermal Performance</th>
+                                    <th>Cost</th>
+                                    <th>Best For</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>FR-4 Standard</td>
+                                    <td>Poor</td>
+                                    <td>Low</td>
+                                    <td>Low power (<1W), cost-sensitive</td>
+                                </tr>
+                                <tr>
+                                    <td>FR-4 with Thermal Vias</td>
+                                    <td>Fair</td>
+                                    <td>Low-Medium</td>
+                                    <td>Low-mid power (1-3W)</td>
+                                </tr>
+                                <tr>
+                                    <td>Metal Core (MCPCB)</td>
+                                    <td>Good</td>
+                                    <td>Medium</td>
+                                    <td>Mid-high power (3-15W)</td>
+                                </tr>
+                                <tr>
+                                    <td>Ceramic (AlN, Al₂O₃)</td>
+                                    <td>Excellent</td>
+                                    <td>High</td>
+                                    <td>High power, high density</td>
+                                </tr>
+                                <tr>
+                                    <td>Copper Coin/Embedded</td>
+                                    <td>Very Good</td>
+                                    <td>High</td>
+                                    <td>High power, complex layouts</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h3>4.2 Thermal Via Design</h3>
+                        <p>Thermal vias improve heat spreading in FR-4 PCBs:</p>
+                        <ul>
+                            <li><strong>Via size</strong>: 0.3-0.5mm diameter typical</li>
+                            <li><strong>Via count</strong>: As many as practical under LED thermal pad</li>
+                            <li><strong>Via filling</strong>: Filled vias (copper or solder) improve conductivity</li>
+                            <li><strong>Placement</strong>: Directly under LED thermal pad</li>
+                        </ul>
+
+                        <h3>4.3 Metal Core PCB Design</h3>
+                        <p>MCPCB construction for high-power LEDs:</p>
+                        <ul>
+                            <li><strong>Dielectric layer</strong>: 75-150 μm typical thickness</li>
+                            <li><strong>Thermal conductivity</strong>: 1-3 W/mK for dielectric</li>
+                            <li><strong>Metal base</strong>: 1-3mm aluminum typical</li>
+                            <li><strong>Electrical isolation</strong>: Maintained by dielectric layer</li>
+                        </ul>
+                    </section>
+
+                    <section id="calculation-examples">
+                        <h2>5. Thermal Calculation Examples</h2>
+                        
+                        <h3>5.1 Example 1: Mid-Power LED (XP-G3)</h3>
+                        <p><strong>Given</strong>:</p>
+                        <ul>
+                            <li>LED: Cree XP-G3 @ 700mA, 2.9Vf</li>
+                            <li>Power: P<sub>d</sub> = 2.03W</li>
+                            <li>R<sub>θJC</sub> = 2.5°C/W (from datasheet)</li>
+                            <li>T<sub>j(max)</sub> = 150°C</li>
+                            <li>T<sub>a</sub> = 50°C (max ambient)</li>
+                        </ul>
+                        
+                        <p><strong>Calculation</strong>:</p>
+                        <div class="formula-box">
+                            <p>Max allowed R<sub>θJA</sub> = (150 - 50) / 2.03 = 49.3°C/W</p>
+                            <p>Required R<sub>θSA</sub> = 49.3 - 2.5 - 0.5 = 46.3°C/W</p>
+                        </div>
+                        <p><strong>Result</strong>: Small heat sink or adequate PCB copper area sufficient.</p>
+
+                        <h3>5.2 Example 2: High-Power LED (XHP70.2)</h3>
+                        <p><strong>Given</strong>:</p>
+                        <ul>
+                            <li>LED: Cree XHP70.2 @ 2400mA, 11.5Vf</li>
+                            <li>Power: P<sub>d</sub> = 27.6W</li>
+                            <li>R<sub>θJC</sub> = 0.8°C/W</li>
+                            <li>T<sub>j(max)</sub> = 150°C</li>
+                            <li>T<sub>a</sub> = 40°C</li>
+                        </ul>
+                        
+                        <p><strong>Calculation</strong>:</p>
+                        <div class="formula-box">
+                            <p>Max allowed R<sub>θJA</sub> = (150 - 40) / 27.6 = 4.0°C/W</p>
+                            <p>Required R<sub>θSA</sub> = 4.0 - 0.8 - 0.2 = 3.0°C/W</p>
+                        </div>
+                        <p><strong>Result</strong>: Large heat sink with forced air cooling required.</p>
+
+                        <h3>5.3 Example 3: LED Array</h3>
+                        <p><strong>Given</strong>:</p>
+                        <ul>
+                            <li>Array: 12 × XP-G3 LEDs</li>
+                            <li>Total Power: 24W</li>
+                            <li>MCPCB with R<sub>θJB</sub> = 3°C/W</li>
+                            <li>T<sub>a</sub> = 35°C</li>
+                        </ul>
+                        
+                        <p><strong>Calculation</strong>:</p>
+                        <div class="formula-box">
+                            <p>Board temperature: T<sub>b</sub> = 35 + (3 × 24) = 107°C</p>
+                            <p>Junction temperature: T<sub>j</sub> = 107 + (2.5 × 2) = 112°C</p>
+                        </div>
+                        <p><strong>Result</strong>: Within specification, but margin for worst-case conditions needed.</p>
+                    </section>
+
+                    <section id="measurement">
+                        <h2>6. Thermal Measurement</h2>
+                        
+                        <h3>6.1 Case Temperature Measurement</h3>
+                        <p>Measuring T<sub>c</sub> with thermocouple:</p>
+                        <ul>
+                            <li>Place thermocouple on LED case (anode or cathode pad)</li>
+                            <li>Use thermal epoxy for good contact</li>
+                            <li>Allow time for temperature stabilization</li>
+                            <li>Measure at steady-state conditions</li>
+                        </ul>
+
+                        <h3>6.2 Forward Voltage Method</h3>
+                        <p>Non-contact junction temperature measurement:</p>
+                        <ol>
+                            <li>Calibrate V<sub>f</sub> vs T<sub>j</sub> at low current (e.g., 10mA)</li>
+                            <li>Measure V<sub>f</sub> at operating conditions</li>
+                            <li>Calculate T<sub>j</sub> from calibration curve</li>
+                        </ol>
+                        
+                        <div class="formula-box">
+                            <h4>Junction Temperature from V<sub>f</sub></h4>
+                            <p class="formula">T<sub>j</sub> = T<sub>ref</sub> + (V<sub>f(ref)</sub> - V<sub>f(measured)</sub>) / K<sub>v</sub></p>
+                            <p>Where K<sub>v</sub> is the temperature coefficient of V<sub>f</sub> (typically -2 to -4 mV/°C)</p>
+                        </div>
+
+                        <h3>6.3 Thermal Imaging</h3>
+                        <p>Infrared cameras provide visual temperature mapping:</p>
+                        <ul>
+                            <li>Identify hot spots in the design</li>
+                            <li>Verify thermal model accuracy</li>
+                            <li>Validate heat sink performance</li>
+                            <li>Check for uneven current distribution</li>
+                        </ul>
+                    </section>
+
+                    <section id="best-practices">
+                        <h2>7. Best Practices</h2>
+                        
+                        <h3>7.1 Design Guidelines</h3>
+                        <ul>
+                            <li><strong>Margin</strong>: Design for 80% of rated T<sub>j(max)</sub></li>
+                            <li><strong>Worst-case</strong>: Consider highest ambient, maximum power</li>
+                            <li><strong>Validation</strong>: Always measure and verify temperatures</li>
+                            <li><strong>Documentation</strong>: Record thermal design parameters</li>
+                        </ul>
+
+                        <h3>7.2 Common Mistakes</h3>
+                        <ul>
+                            <li>Ignoring thermal resistance of interface materials</li>
+                            <li>Insufficient heat sink for natural convection</li>
+                            <li>Blocking airflow around heat sink</li>
+                            <li>Using undersized thermal vias</li>
+                            <li>Not accounting for LED aging (increased V<sub>f</sub>)</li>
+                        </ul>
+
+                        <h3>7.3 Advanced Techniques</h3>
+                        <ul>
+                            <li><strong>Temperature compensation</strong>: Adjust current based on temperature</li>
+                            <li><strong>Thermal feedback</strong>: Reduce current if T<sub>j</sub> exceeds limit</li>
+                            <li><strong>Pulse operation</strong>: Reduce average power for peak cooling</li>
+                            <li><strong>Active cooling</strong>: Thermally controlled fans</li>
+                        </ul>
+                    </section>
+
+                    <section id="references">
+                        <h2>References</h2>
+                        <ul>
+                            <li>Cree XLamp Application Note: CLD-AP-XX-Thermal</li>
+                            <li>IES LM-80-08: Measuring Lumen Maintenance</li>
+                            <li>TM-21-11: Projecting Long Term Lumen Maintenance</li>
+                            <li>Cree XLamp Datasheets and Thermal Characterization Reports</li>
+                        </ul>
+                    </section>
+
+                    <section id="related-documents">
+                        <h2>Related Documents</h2>
+                        <ul>
+                            <li><a href="/support/design-guides/led-system-design.html">LED System Design Guide</a></li>
+                            <li><a href="/support/selection-guides/led-selection.html">LED Selection Guide</a></li>
+                            <li><a href="/support/application-notes/led-driver-thermal.html">LED Driver Thermal Considerations</a></li>
+                            <li><a href="/products/cree-led.html">Cree LED Product Catalog</a></li>
+                        </ul>
+                    </section>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="/support/">Technical Support</a></li>
+                        <li><a href="/support/design-guides.html">Design Guides</a></li>
+                        <li><a href="/support/application-notes.html">Application Notes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="/products/cree-led.html">Cree LED</a></li>
+                        <li><a href="/products/wolfspeed-power.html">Wolfspeed Power</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>Email: <a href="mailto:support@cree.elec-distributor.com">support@cree.elec-distributor.com</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LiTong Group. Authorized Distributor of Cree & Wolfspeed Products.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="../../js/main.js" defer></script>
+</body>
+</html>

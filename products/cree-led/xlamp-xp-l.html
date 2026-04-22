@@ -228,7 +228,11 @@
 
             <div class="product-detail-grid">
                 <div class="product-image-section">
-                    <img src="../../images/xp-l.jpg" alt="Cree XLamp XP-L LED" class="product-image">
+                    <picture>
+                        <source srcset="../../images/xp-l.webp" type="image/webp">
+                        <source srcset="../../images/xp-l.jpg" type="image/jpeg">
+                        <img src="../../images/xp-l.jpg" alt="Cree XLamp XP-L LED" class="product-image" loading="lazy" width="600" height="400">
+                    </picture>
                 </div>
 
                 <div class="product-info-section">

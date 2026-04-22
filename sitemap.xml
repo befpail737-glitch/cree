@@ -1,75 +1,541 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <!-- Homepage -->
    <url>
       <loc>https://cree.elec-distributor.com/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
       <priority>1.0</priority>
    </url>
+   
+   <!-- Distributor Pages - Global & Countries (High Priority) -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.95</priority>
+   </url>
+   
+   <!-- P1 Countries: USA, Germany -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-usa.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-germany.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   
+   <!-- P2 Countries: Vietnam, India, Korea -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-vietnam.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-india.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-korea.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   
+   <!-- P3 Countries: Italy, Poland, Russia, Malaysia, Brazil -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-italy.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-poland.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-russia.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-malaysia.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-brazil.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <!-- P4 Countries: France, Japan, Mexico, Turkey -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-france.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-japan.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-mexico.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-distributor-turkey.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <!-- Product Pages -->
    <url>
       <loc>https://cree.elec-distributor.com/products/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.9</priority>
    </url>
    <url>
-      <loc>https://cree.elec-distributor.com/products/cree-led/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <loc>https://cree.elec-distributor.com/products/cree-led.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/power-modules.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/sic-mosfets.html</loc>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://cree.elec-distributor.com/products/cree-led/xlamp-xp-g3/</loc>
-      <lastmod>2024-01-15</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
-   </url>
-   <url>
-      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/sic-diodes.html</loc>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/c3m0060065k/</loc>
-      <lastmod>2024-01-15</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.7</priority>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/modules.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
+   <!-- Product Detail Pages -->
+   <url>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/c3m0060065k.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/c3m0065065k.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/wolfspeed-power/sic-diode.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <!-- Cree LED Product Pages -->
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/xlamp-xp-l.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/xlamp-xhp50.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/xlamp-xp-g3.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/xlamp-xp-e2.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/cma-module.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/cmb-module.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/j-series-5050.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <!-- Cree LED J-Series Product Pages -->
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/j-series/j-2835.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/j-series/j-3030.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/products/cree-led/j-series/j-5050.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   
+   <!-- Topic Cluster Guides (Content Hub) -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-led-guide.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/wolfspeed-sic-guide.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   
+   <!-- Transactional Pages (High Conversion Intent) -->
+   <url>
+      <loc>https://cree.elec-distributor.com/buy-cree-products.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-authorized-distributor.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-wholesale.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   
+   <!-- Product Category Pages -->
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-led-lights.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/wolfspeed-sic-mosfet.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-xlamp.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-automotive.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-power-module.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-rf-components.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-led-street-light.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/cree-horticultural.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   
+   <!-- Solutions Pages -->
    <url>
       <loc>https://cree.elec-distributor.com/solutions/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
-      <loc>https://cree.elec-distributor.com/solutions/outdoor-lighting/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <loc>https://cree.elec-distributor.com/solutions/street-lighting.html</loc>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.7</priority>
+      <priority>0.85</priority>
    </url>
    <url>
-      <loc>https://cree.elec-distributor.com/support/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <loc>https://cree.elec-distributor.com/solutions/ev-chargers.html</loc>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>weekly</changefreq>
-      <priority>0.9</priority>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/solutions/solar-inverters.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/solutions/outdoor-lighting.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/solutions/portable-lighting.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/solutions/horticultural-lighting.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   
+   <!-- Content Hub - Blog/Resources -->
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/sic-vs-silicon.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/ev-charging-sic.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/solar-inverter-efficiency.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/led-efficiency-guide.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/led-thermal-design.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/horticultural-lighting-spectrum.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/gan-technology-overview.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/5g-infrastructure-gan.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/sic-mosfet-selection-guide.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/blog/led-driver-design-guide.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   
+   <!-- Case Studies -->
+   <url>
+      <loc>https://cree.elec-distributor.com/case-studies/</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/case-studies/ev-charging-350kw.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/case-studies/solar-inverter-efficiency.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/case-studies/smart-city-lighting.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/case-studies/vertical-farm-lighting.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   
+   <!-- Whitepapers -->
+   <url>
+      <loc>https://cree.elec-distributor.com/whitepapers/</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.85</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/whitepapers/sic-vs-silicon-whitepaper.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/whitepapers/sic-ev-charging-design.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/whitepapers/gan-5g-whitepaper.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   
+   <!-- Technical Articles in Support -->
+   <url>
+      <loc>https://cree.elec-distributor.com/support/technical-articles/</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/support/technical-articles/sic-vs-silicon-comparison.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/support/technical-articles/led-thermal-management.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.75</priority>
+   </url>
+   
+   <!-- Support & Other Pages -->
+   <url>
+      <loc>https://cree.elec-distributor.com/support/</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.8</priority>
    </url>
    <url>
       <loc>https://cree.elec-distributor.com/news/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>daily</changefreq>
       <priority>0.8</priority>
    </url>
    <url>
       <loc>https://cree.elec-distributor.com/about/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.6</priority>
    </url>
    <url>
-      <loc>https://cree.elec-distributor.com/contact/</loc>
-      <lastmod>2024-01-15</lastmod>
+      <loc>https://cree.elec-distributor.com/contact.html</loc>
+      <lastmod>2026-04-22</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.8</priority>
+   </url>
+   <url>
+      <loc>https://cree.elec-distributor.com/privacy.html</loc>
+      <lastmod>2026-04-22</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.4</priority>
    </url>
 </urlset>
